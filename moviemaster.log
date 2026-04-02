@@ -1,0 +1,441 @@
+[SYSTEM_START] [LOG_LEVEL: INFO] [DATA_RANGE: 2024-2026]
+[ID: 001] FILM: "Ne Zha 2" | REGION: China | GROSS: $2,215,690,000 | STATUS: Global Animated Record
+[ID: 002] FILM: "Zootopia 2" | REGION: USA | GROSS: $1,868,202,037 | STATUS: Disney All-Time High
+[ID: 003] FILM: "Pushpa 2: The Rule" | REGION: India (Telugu) | GROSS: ₹1,720 Cr | STATUS: Mega Hit
+[ID: 004] FILM: "Inside Out 2" | REGION: USA | GROSS: $1,698,765,616 | STATUS: 2024 Leader
+[ID: 005] FILM: "Avatar: Fire and Ash" | REGION: USA | GROSS: $1,487,576,332 | STATUS: Ongoing
+[ID: 006] FILM: "Dhurandhar 2" | REGION: India (Hindi) | GROSS: ₹1,434 Cr | STATUS: 2026 Hindi Record
+[ID: 007] FILM: "Dhurandhar" | REGION: India (Hindi) | GROSS: ₹1,350 Cr | STATUS: 2025 Blockbuster
+[ID: 008] FILM: "Deadpool & Wolverine" | REGION: USA | GROSS: $1,338,073,645 | STATUS: R-Rated Record
+[ID: 009] FILM: "Toy Story 5" | REGION: USA | PROJECTED: $1,400,000,000 | STATUS: High Anticipation
+[ID: 010] FILM: "Despicable Me 4" | REGION: USA | GROSS: $969,126,452 | STATUS: Blockbuster
+[ID: 011] FILM: "A Minecraft Movie" | REGION: USA | GROSS: $961,187,780 | STATUS: Hit
+[ID: 012] FILM: "Kantara: Chapter 1" | REGION: India (Kannada) | GROSS: ₹885 Cr | STATUS: Super Hit
+[ID: 013] FILM: "Moana 2" | REGION: USA | GROSS: $882,505,425 | STATUS: Hit
+[ID: 014] FILM: "Stree 2" | REGION: India (Hindi) | GROSS: ₹874 Cr | STATUS: 2024 Record Holder
+[ID: 015] FILM: "Jurassic World Rebirth" | REGION: USA | GROSS: $869,146,189 | STATUS: Successful Reboot
+[ID: 016] FILM: "Chhaava" | REGION: India (Hindi) | GROSS: ₹808 Cr | STATUS: Critical/Commercial Success
+[ID: 017] FILM: "Demon Slayer: Infinity Castle" | REGION: Japan | GROSS: $781,336,044 | STATUS: Anime Phenomenon
+[ID: 018] FILM: "The Super Mario Bros. 2" | REGION: USA | PROJECTED: $1,100,000,000 | STATUS: 2026 Tentpole
+[ID: 019] FILM: "Superman" | REGION: USA | GROSS: $618,723,803 | STATUS: DCU Foundation
+[ID: 020] FILM: "Coolie" | REGION: India (Tamil) | GROSS: ₹675 Cr | STATUS: Hit
+[ID: 021] FILM: "Saiyaara" | REGION: India (Hindi) | GROSS: ₹570 Cr | STATUS: Surprise of 2025
+[ID: 022] FILM: "Border 2" | REGION: India (Hindi) | GROSS: ₹464 Cr | STATUS: Strong Sequel
+[ID: 023] FILM: "Gladiator II" | REGION: USA | GROSS: $455,200,000 | STATUS: Hit
+[ID: 024] FILM: "War 2" | REGION: India (Hindi) | GROSS: ₹364 Cr | STATUS: Below Expectations
+[ID: 025] FILM: "Mahavatar Narsimha" | REGION: India (Hindi) | GROSS: ₹327 Cr | STATUS: Animation Breakthrough
+[ID: 026] FILM: "Snow White" | REGION: USA | GROSS: $205,000,000 | STATUS: Box Office Bomb
+[ID: 027] FILM: "The Raja Saab" | REGION: India (Telugu) | GROSS: ₹208 Cr | STATUS: Average
+[ID: 028] FILM: "F1" | REGION: USA | GROSS: $633,442,436 | STATUS: High Budget Struggle
+[ID: 029] FILM: "Lokah: Chapter 1" | REGION: India (Malayalam) | GROSS: ₹304 Cr | STATUS: Super Hit
+[ID: 030] FILM: "Mufasa: The Lion King" | REGION: USA | GROSS: $327,983,537 | STATUS: Moderate
+[SYSTEM_START] [LOG_LEVEL: INFO] [DATA_RANGE: 2024-2026]
+[ID: 001] FILM: "Ne Zha 2" | REGION: China | GROSS: $2,215,690,000 | STATUS: Global Animated Record
+[ID: 002] FILM: "Zootopia 2" | REGION: USA | GROSS: $1,868,202,037 | STATUS: Disney All-Time High
+[ID: 003] FILM: "Pushpa 2: The Rule" | REGION: India (Telugu) | GROSS: ₹1,720 Cr | STATUS: Mega Hit
+[ID: 004] FILM: "Inside Out 2" | REGION: USA | GROSS: $1,698,765,616 | STATUS: 2024 Leader
+[ID: 005] FILM: "Avatar: Fire and Ash" | REGION: USA | GROSS: $1,487,576,332 | STATUS: Ongoing
+[ID: 006] FILM: "Dhurandhar 2" | REGION: India (Hindi) | GROSS: ₹1,434 Cr | STATUS: 2026 Hindi Record
+[ID: 007] FILM: "Dhurandhar" | REGION: India (Hindi) | GROSS: ₹1,350 Cr | STATUS: 2025 Blockbuster
+[ID: 008] FILM: "Deadpool & Wolverine" | REGION: USA | GROSS: $1,338,073,645 | STATUS: R-Rated Record
+[ID: 009] FILM: "Toy Story 5" | REGION: USA | PROJECTED: $1,400,000,000 | STATUS: High Anticipation
+[ID: 010] FILM: "Despicable Me 4" | REGION: USA | GROSS: $969,126,452 | STATUS: Blockbuster
+[ID: 011] FILM: "A Minecraft Movie" | REGION: USA | GROSS: $961,187,780 | STATUS: Hit
+[ID: 012] FILM: "Kantara: Chapter 1" | REGION: India (Kannada) | GROSS: ₹885 Cr | STATUS: Super Hit
+[ID: 013] FILM: "Moana 2" | REGION: USA | GROSS: $882,505,425 | STATUS: Hit
+[ID: 014] FILM: "Stree 2" | REGION: India (Hindi) | GROSS: ₹874 Cr | STATUS: 2024 Record Holder
+[ID: 015] FILM: "Jurassic World Rebirth" | REGION: USA | GROSS: $869,146,189 | STATUS: Successful Reboot
+[ID: 016] FILM: "Chhaava" | REGION: India (Hindi) | GROSS: ₹808 Cr | STATUS: Critical/Commercial Success
+[ID: 017] FILM: "Demon Slayer: Infinity Castle" | REGION: Japan | GROSS: $781,336,044 | STATUS: Anime Phenomenon
+[ID: 018] FILM: "The Super Mario Bros. 2" | REGION: USA | PROJECTED: $1,100,000,000 | STATUS: 2026 Tentpole
+[ID: 019] FILM: "Superman" | REGION: USA | GROSS: $618,723,803 | STATUS: DCU Foundation
+[ID: 020] FILM: "Coolie" | REGION: India (Tamil) | GROSS: ₹675 Cr | STATUS: Hit
+[ID: 021] FILM: "Saiyaara" | REGION: India (Hindi) | GROSS: ₹570 Cr | STATUS: Surprise of 2025
+[ID: 022] FILM: "Border 2" | REGION: India (Hindi) | GROSS: ₹464 Cr | STATUS: Strong Sequel
+[ID: 023] FILM: "Gladiator II" | REGION: USA | GROSS: $455,200,000 | STATUS: Hit
+[ID: 024] FILM: "War 2" | REGION: India (Hindi) | GROSS: ₹364 Cr | STATUS: Below Expectation[SYSTEM_START] [LOG_LEVEL: INFO] [DATA_RANGE: 2024-2026]
+[ID: 001] FILM: "Ne Zha 2" | REGION: China | GROSS: $2,215,690,000 | STATUS: Global Animated Record
+[ID: 002] FILM: "Zootopia 2" | REGION: USA | GROSS: $1,868,202,037 | STATUS: Disney All-Time High
+[ID: 003] FILM: "Pushpa 2: The Rule" | REGION: India (Telugu) | GROSS: ₹1,720 Cr | STATUS: Mega Hit
+[ID: 004] FILM: "Inside Out 2" | REGION: USA | GROSS: $1,698,765,616 | STATUS: 2024 Leader
+[ID: 005] FILM: "Avatar: Fire and Ash" | REGION: USA | GROSS: $1,487,576,332 | STATUS: Ongoing
+[ID: 006] FILM: "Dhurandhar 2" | REGION: India (Hindi) | GROSS: ₹1,434 Cr | STATUS: 2026 Hindi Record
+[ID: 007] FILM: "Dhurandhar" | REGION: India (Hindi) | GROSS: ₹1,350 Cr | STATUS: 2025 Blockbuster
+[ID: 008] FILM: "Deadpool & Wolverine" | REGION: USA | GROSS: $1,338,073,645 | STATUS: R-Rated Record
+[ID: 009] FILM: "Toy Story 5" | REGION: USA | PROJECTED: $1,400,000,000 | STATUS: High Anticipation
+[ID: 010] FILM: "Despicable Me 4" | REGION: USA | GROSS: $969,126,452 | STATUS: Blockbuster
+[ID: 011] FILM: "A Minecraft Movie" | REGION: USA | GROSS: $961,187,780 | STATUS: Hit
+[ID: 012] FILM: "Kantara: Chapter 1" | REGION: India (Kannada) | GROSS: ₹885 Cr | STATUS: Super Hit
+[ID: 013] FILM: "Moana 2" | REGION: USA | GROSS: $882,505,425 | STATUS: Hit
+[ID: 014] FILM: "Stree 2" | REGION: India (Hindi) | GROSS: ₹874 Cr | STATUS: 2024 Record Holder
+[ID: 015] FILM: "Jurassic World Rebirth" | REGION: USA | GROSS: $869,146,189 | STATUS: Successful Reboot
+[ID: 016] FILM: "Chhaava" | REGION: India (Hindi) | GROSS: ₹808 Cr | STATUS: Critical/Commercial Success
+[ID: 017] FILM: "Demon Slayer: Infinity Castle" | REGION: Japan | GROSS: $781,336,044 | STATUS: Anime Phenomenon
+[ID: 018] FILM: "The Super Mario Bros. 2" | REGION: USA | PROJECTED: $1,100,000,000 | STATUS: 2026 Tentpole
+[ID: 019] FILM: "Superman" | REGION: USA | GROSS: $618,723,803 | STATUS: DCU Foundation
+[ID: 020] FILM: "Coolie" | REGION: India (Tamil) | GROSS: ₹675 Cr | STATUS: Hit
+[ID: 021] FILM: "Saiyaara" | REGION: India (Hindi) | GROSS: ₹570 Cr | STATUS: Surprise of 2025
+[ID: 022] FILM: "Border 2" | REGION: India (Hindi) | GROSS: ₹464 Cr | STATUS: Strong Sequel
+[ID: 023] FILM: "Gladiator II" | REGION: USA | GROSS: $455,200,000 | STATUS: Hit
+[ID: 024] FILM: "War 2" | REGION: India (Hindi) | GROSS: ₹364 Cr | STATUS: Below Expectation[SYSTEM_START] [LOG_LEVEL: INFO] [DATA_RANGE: 2024-2026]
+[ID: 001] FILM: "Ne Zha 2" | REGION: China | GROSS: $2,215,690,000 | STATUS: Global Animated Record
+[ID: 002] FILM: "Zootopia 2" | REGION: USA | GROSS: $1,868,202,037 | STATUS: Disney All-Time High
+[ID: 003] FILM: "Pushpa 2: The Rule" | REGION: India (Telugu) | GROSS: ₹1,720 Cr | STATUS: Mega Hit
+[ID: 004] FILM: "Inside Out 2" | REGION: USA | GROSS: $1,698,765,616 | STATUS: 2024 Leader
+[ID: 005] FILM: "Avatar: Fire and Ash" | REGION: USA | GROSS: $1,487,576,332 | STATUS: Ongoing
+[ID: 006] FILM: "Dhurandhar 2" | REGION: India (Hindi) | GROSS: ₹1,434 Cr | STATUS: 2026 Hindi Record |Darling darling dill kyu toda peelo alam soda
+[ID: 007] FILM: "Dhurandhar" | REGION: India (Hindi) | GROSS: ₹1,350 Cr | STATUS: 2025 Blockbuster |Tujhay CTF ki yaad nai aye jassi
+[ID: 008] FILM: "Deadpool & Wolverine" | REGION: USA | GROSS: $1,338,073,645 | STATUS: R-Rated Record |Hosla Coordinates Flag
+[ID: 009] FILM: "Toy Story 5" | REGION: USA | PROJECTED: $1,400,000,000 | STATUS: High Anticipation
+[ID: 010] FILM: "Despicable Me 4" | REGION: USA | GROSS: $969,126,452 | STATUS: Blockbuster
+[ID: 011] FILM: "A Minecraft Movie" | REGION: USA | GROSS: $961,187,780 | STATUS: Hit
+[ID: 012] FILM: "Kantara: Chapter 1" | REGION: India (Kannada) | GROSS: ₹885 Cr | STATUS: Super Hit
+[ID: 013] FILM: "Moana 2" | REGION: USA | GROSS: $882,505,425 | STATUS: Hit
+[ID: 014] FILM: "Stree 2" | REGION: India (Hindi) | GROSS: ₹874 Cr | STATUS: 2024 Record Holder
+[ID: 015] FILM: "Jurassic World Rebirth" | REGION: USA | GROSS: $869,146,189 | STATUS: Successful Reboot
+[ID: 016] FILM: "Chhaava" | REGION: India (Hindi) | GROSS: ₹808 Cr | STATUS: Critical/Commercial Success
+[ID: 017] FILM: "Demon Slayer: Infinity Castle" | REGION: Japan | GROSS: $781,336,044 | STATUS: Anime Phenomenon
+[ID: 018] FILM: "The Super Mario Bros. 2" | REGION: USA | PROJECTED: $1,100,000,000 | STATUS: 2026 Tentpole
+[ID: 019] FILM: "Superman" | REGION: USA | GROSS: $618,723,803 | STATUS: DCU Foundation
+[ID: 020] FILM: "Coolie" | REGION: India (Tamil) | GROSS: ₹675 Cr | STATUS: Hit
+[ID: 021] FILM: "Saiyaara" | REGION: India (Hindi) | GROSS: ₹570 Cr | STATUS: Surprise of 2025
+[ID: 022] FILM: "Border 2" | REGION: India (Hindi) | GROSS: ₹464 Cr | STATUS: Strong Sequel
+[ID: 023] FILM: "Gladiator II" | REGION: USA | GROSS: $455,200,000 | STATUS: Hit
+[ID: 024] FILM: "War 2" | REGION: India (Hindi) | GROSS: ₹364 Cr | STATUS: Below Expectation[SYSTEM_START] [LOG_LEVEL: INFO] [DATA_RANGE: 2024-2026]
+[ID: 001] FILM: "Ne Zha 2" | REGION: China | GROSS: $2,215,690,000 | STATUS: Global Animated Record
+[ID: 002] FILM: "Zootopia 2" | REGION: USA | GROSS: $1,868,202,037 | STATUS: Disney All-Time High
+[ID: 003] FILM: "Pushpa 2: The Rule" | REGION: India (Telugu) | GROSS: ₹1,720 Cr | STATUS: Mega Hit
+[ID: 004] FILM: "Inside Out 2" | REGION: USA | GROSS: $1,698,765,616 | STATUS: 2024 Leader
+[ID: 005] FILM: "Avatar: Fire and Ash" | REGION: USA | GROSS: $1,487,576,332 | STATUS: Ongoing
+[ID: 006] FILM: "Dhurandhar 2" | REGION: India (Hindi) | GROSS: ₹1,434 Cr | STATUS: 2026 Hindi Record
+[ID: 007] FILM: "Dhurandhar" | REGION: India (Hindi) | GROSS: ₹1,350 Cr | STATUS: 2025 Blockbuster
+[ID: 008] FILM: "Deadpool & Wolverine" | REGION: USA | GROSS: $1,338,073,645 | STATUS: R-Rated Record
+[ID: 009] FILM: "Toy Story 5" | REGION: USA | PROJECTED: $1,400,000,000 | STATUS: High Anticipation
+[ID: 010] FILM: "Despicable Me 4" | REGION: USA | GROSS: $969,126,452 | STATUS: Blockbuster
+[ID: 011] FILM: "A Minecraft Movie" | REGION: USA | GROSS: $961,187,780 | STATUS: Hit
+[ID: 012] FILM: "Kantara: Chapter 1" | REGION: India (Kannada) | GROSS: ₹885 Cr | STATUS: Super Hit
+[ID: 013] FILM: "Moana 2" | REGION: USA | GROSS: $882,505,425 | STATUS: Hit
+[ID: 014] FILM: "Stree 2" | REGION: India (Hindi) | GROSS: ₹874 Cr | STATUS: 2024 Record Holder
+[ID: 015] FILM: "Jurassic World Rebirth" | REGION: USA | GROSS: $869,146,189 | STATUS: Successful Reboot
+[ID: 016] FILM: "Chhaava" | REGION: India (Hindi) | GROSS: ₹808 Cr | STATUS: Critical/Commercial Success
+[ID: 017] FILM: "Demon Slayer: Infinity Castle" | REGION: Japan | GROSS: $781,336,044 | STATUS: Anime Phenomenon
+[ID: 018] FILM: "The Super Mario Bros. 2" | REGION: USA | PROJECTED: $1,100,000,000 | STATUS: 2026 Tentpole
+[ID: 019] FILM: "Superman" | REGION: USA | GROSS: $618,723,803 | STATUS: DCU Foundation
+[ID: 020] FILM: "Coolie" | REGION: India (Tamil) | GROSS: ₹675 Cr | STATUS: Hit
+[ID: 021] FILM: "Saiyaara" | REGION: India (Hindi) | GROSS: ₹570 Cr | STATUS: Surprise of 2025
+[ID: 022] FILM: "Border 2" | REGION: India (Hindi) | GROSS: ₹464 Cr | STATUS: Strong Sequel
+[ID: 023] FILM: "Gladiator II" | REGION: USA | GROSS: $455,200,000 | STATUS: Hit
+[ID: 024] FILM: "War 2" | REGION: India (Hindi) | GROSS: ₹364 Cr | STATUS: Below Expectation
+[ID: 100] FILM: "The Devil Wears Prada 2" | REGION: USA | PROJECTED: $650,000,000 | STATUS: 2026 Expected Hit
+[ID: 101] FILM: "Screaming 7" | REGION: USA | PROJECTED: $175,000,000 | STATUS: Niche Success
+[ID: 102] FILM: "Ramayana Part 1" | REGION: India (Hindi) | PROJECTED: ₹1,100 Cr | STATUS: Epic Scale
+[ID: 200] FILM: "Drishyam 3" | REGION: India (Hindi) | PROJECTED: ₹400 Cr | STATUS: Safe Bet
+[ID: 201] FILM: "The Mandalorian & Grogu" | REGION: USA | PROJECTED: $250,000,000 | STATUS: Disney+ to Cinema
+[ID: 290] FILM: "Welcome to the Jungle" | REGION: India (Hindi) | GROSS: ₹200 Cr | STATUS: Average
+[ID: 291] FILM: "Aadu 3" | REGION: India (Malayalam) | GROSS: ₹111 Cr | STATUS: Hit
+[ID: 292] FILM: "Dune: Part Three" | REGION: USA | PROJECTED: $850,000,000 | STATUS: Highly Anticipated
+[ID: 293] FILM: "King" | REGION: India (Hindi) | PROJECTED: ₹700 Cr | STATUS: SRK Comeback 2026
+[ID: 294] FILM: "Spider-Man: Brand New Day" | REGION: USA | PROJECTED: $1.2B | STATUS: 2026 Blockbuster
+[ID: 295] FILM: "Bhoot Bangla" | REGION: India (Hindi) | PROJECTED: ₹150 Cr | STATUS: Comedy Horror
+[ID: 296] FILM: "The Mummy" (Reboot) | REGION: USA | PROJECTED: $75M | STATUS: Low Interest
+[ID: 297] FILM: "Jumanji 3" | REGION: USA | PROJECTED: $800M | STATUS: Tentpole
+[ID: 298] FILM: "Housefull 5" | REGION: India (Hindi) | GROSS: ₹289 Cr | STATUS: Profitable
+[ID: 299] FILM: "Project Hail Mary" | REGION: USA | PROJECTED: $300M | STATUS: Sci-Fi Hope
+[ID: 300] FILM: "Avengers: Doomsday" | REGION: USA | PROJECTED: $2.0B+ | STATUS: Return[ID: 290] FILM: "Welcome to the Jungle" | REGION: India (Hindi) | GROSS: ₹200 Cr | STATUS: Average
+[ID: 291] FILM: "Aadu 3" | REGION: India (Malayalam) | GROSS: ₹111 Cr | STATUS: Hit
+[ID: 292] FILM: "Dune: Part Three" | REGION: USA | PROJECTED: $850,000,000 | STATUS: Highly Anticipated
+[ID: 293] FILM: "King" | REGION: India (Hindi) | PROJECTED: ₹700 Cr | STATUS: SRK Comeback 2026
+[ID: 294] FILM: "Spider-Man: Brand New Day" | REGION: USA | PROJECTED: $1.2B | STATUS: 2026 Blockbuster
+[ID: 295] FILM: "Bhoot Bangla" | REGION: India (Hindi) | PROJECTED: ₹150 Cr | STATUS: Comedy Horror
+[ID: 296] FILM: "The Mummy" (Reboot) | REGION: USA | PROJECTED: $75M | STATUS: Low Interest
+[ID: 297] FILM: "Jumanji 3" | REGION: USA | PROJECTED: $800M | STATUS: Tentpole
+[ID: 298] FILM: "Housefull 5" | REGION: India (Hindi) | GROSS: ₹289 Cr | STATUS: Profitable
+[ID: 299] FILM: "Project Hail Mary" | REGION: USA | PROJECTED: $300M | STATUS: Sci-Fi Hope
+[ID: 300] FILM: "Avengers: Doomsday" | REGION: USA | PROJECTED: $2.0B+ | STATUS: Return[ID: 290] FILM: "Welcome to the Jungle" | REGION: India (Hindi) | GROSS: ₹200 Cr | STATUS: Average
+[ID: 291] FILM: "Aadu 3" | REGION: India (Malayalam) | GROSS: ₹111 Cr | STATUS: Hit
+[ID: 292] FILM: "Dune: Part Three" | REGION: USA | PROJECTED: $850,000,000 | STATUS: Highly Anticipated
+[ID: 293] FILM: "King" | REGION: India (Hindi) | PROJECTED: ₹700 Cr | STATUS: SRK Comeback 2026
+[ID: 294] FILM: "Spider-Man: Brand New Day" | REGION: USA | PROJECTED: $1.2B | STATUS: 2026 Blockbuster
+[ID: 295] FILM: "Bhoot Bangla" | REGION: India (Hindi) | PROJECTED: ₹150 Cr | STATUS: Comedy Horror
+[ID: 296] FILM: "The Mummy" (Reboot) | REGION: USA | PROJECTED: $75M | STATUS: Low Interest
+[ID: 297] FILM: "Jumanji 3" | REGION: USA | PROJECTED: $800M | STATUS: Tentpole
+[ID: 298] FILM: "Housefull 5" | REGION: India (Hindi) | GROSS: ₹289 Cr | STATUS: Profitable
+[ID: 299] FILM: "Project Hail Mary" | REGION: USA | PROJECTED: $300M | STATUS: Sci-Fi Hope
+[ID: 300] FILM: "Avengers: Doomsday" | REGION: USA | PROJECTED: $2.0B+ | STATUS: Return
+[ID: 290] FILM: "Welcome to the Jungle" | REGION: India (Hindi) | GROSS: ₹200 Cr | STATUS: Average[ID: 200] FILM: "Drishyam 3" | REGION: India (Hindi) | PROJECTED: ₹400 Cr | STATUS: Safe Bet
+[ID: 201] FILM: "The Mandalorian & Grogu" | REGION: USA | PROJECTED: $250,000,000 | STATUS: Disney+ to Cinema
+[ID: 290] FILM: "Welcome to the Jungle" | REGION: India (Hindi) | GROSS: ₹200 Cr | STATUS: Average
+[ID: 291] FILM: "Aadu 3" | REGION: India (Malayalam) | GROSS: ₹111 Cr | STATUS: Hit
+[ID: 292] FILM: "Dune: Part Three" | REGION: USA | PROJECTED: $850,000,000 | STATUS: Highly Anticipated
+[ID: 293] FILM: "King" | REGION: India (Hindi) | PROJECTED: ₹700 Cr | STATUS: SRK Comeback 2026
+[ID: 294] FILM: "Spider-Man: Brand New Day" | REGION: USA | PROJECTED: $1.2B | STATUS: 2026 Blockbuster
+[ID: 295] FILM: "Bhoot Bangla" | REGION: India (Hindi) | PROJECTED: ₹150 Cr | STATUS: Comedy Horror
+[ID: 296] FILM: "The Mummy" (Reboot) | REGION: USA | PROJECTED: $75M | STATUS: Low Interest
+[ID: 297] FILM: "Jumanji 3" | REGION: USA | PROJECTED: $800M | STATUS: Tentpole
+[ID: 298] FILM: "Housefull 5" | REGION: India (Hindi) | GROSS: ₹289 Cr | STATUS: Profitable
+[ID: 299] FILM: "Project Hail Mary" | REGION: USA | PROJECTED: $300M | STATUS: Sci-Fi Hope
+[ID: 300] FILM: "Avengers: Doomsday" | REGION: USA | PROJECTED: $2.0B+ | STATUS: Return[ID: 290] FILM: "Welcome to the Jungle" | REGION: India (Hindi) | GROSS: ₹200 Cr | STATUS: Average
+[ID: 291] FILM: "Aadu 3" | REGION: India (Malayalam) | GROSS: ₹111 Cr | STATUS: Hit
+[ID: 292] FILM: "Dune: Part Three" | REGION: USA | PROJECTED: $850,000,000 | STATUS: Highly Anticipated
+[ID: 293] FILM: "King" | REGION: India (Hindi) | PROJECTED: ₹700 Cr | STATUS: SRK Comeback 2026
+[ID: 294] FILM: "Spider-Man: Brand New Day" | REGION: USA | PROJECTED: $1.2B | STATUS: 2026 Blockbuster
+[ID: 295] FILM: "Bhoot Bangla" | REGION: India (Hindi) | PROJECTED: ₹150 Cr | STATUS: Comedy Horror
+[ID: 296] FILM: "The Mummy" (Reboot) | REGION: USA | PROJECTED: $75M | STATUS: Low Interest
+[ID: 297] FILM: "Jumanji 3" | REGION: USA | PROJECTED: $800M | STATUS: Tentpole
+[ID: 298] FILM: "Housefull 5" | REGION: India (Hindi) | GROSS: ₹289 Cr | STATUS: Profitable
+[ID: 299] FILM: "Project Hail Mary" | REGION: USA | PROJECTED: $300M | STATUS: Sci-Fi Hope
+[ID: 300] FILM: "Avengers: Doomsday" | REGION: USA | PROJECTED: $2.0B+ | STATUS: Return[ID: 290] FILM: "Welcome to the Jungle" | REGION: India (Hindi) | GROSS: ₹200 Cr | STATUS: Average
+[ID: 291] FILM: "Aadu 3" | REGION: India (Malayalam) | GROSS: ₹111 Cr | STATUS: Hit
+[ID: 292] FILM: "Dune: Part Three" | REGION: USA | PROJECTED: $850,000,000 | STATUS: Highly Anticipated
+[ID: 293] FILM: "King" | REGION: India (Hindi) | PROJECTED: ₹700 Cr | STATUS: SRK Comeback 2026
+[ID: 294] FILM: "Spider-Man: Brand New Day" | REGION: USA | PROJECTED: $1.2B | STATUS: 2026 Blockbuster
+[ID: 295] FILM: "Bhoot Bangla" | REGION: India (Hindi) | PROJECTED: ₹150 Cr | STATUS: Comedy Horror
+[ID: 296] FILM: "The Mummy" (Reboot) | REGION: USA | PROJECTED: $75M | STATUS: Low Interest
+[ID: 297] FILM: "Jumanji 3" | REGION: USA | PROJECTED: $800M | STATUS: Tentpole
+[ID: 298] FILM: "Housefull 5" | REGION: India (Hindi) | GROSS: ₹289 Cr | STATUS: Profitable
+[ID: 299] FILM: "Project Hail Mary" | REGION: USA | PROJECTED: $300M | STATUS: Sci-Fi Hope
+[ID: 300] FILM: "Avengers: Doomsday" | REGION: USA | PROJECTED: $2.0B+ | STATUS: Return
+[ID: 290] FILM: "Welcome to the Jungle" | REGION: India (Hindi) | GROSS: ₹200 Cr | STATUS: Average[ID: 200] FILM: "Drishyam 3" | REGION: India (Hindi) | PROJECTED: ₹400 Cr | STATUS: Safe Bet
+[ID: 201] FILM: "The Mandalorian & Grogu" | REGION: USA | PROJECTED: $250,000,000 | STATUS: Disney+ to Cinema
+[ID: 290] FILM: "Welcome to the Jungle" | REGION: India (Hindi) | GROSS: ₹200 Cr | STATUS: Average
+[ID: 291] FILM: "Aadu 3" | REGION: India (Malayalam) | GROSS: ₹111 Cr | STATUS: Hit
+[ID: 292] FILM: "Dune: Part Three" | REGION: USA | PROJECTED: $850,000,000 | STATUS: Highly Anticipated
+[ID: 293] FILM: "King" | REGION: India (Hindi) | PROJECTED: ₹700 Cr | STATUS: SRK Comeback 2026
+[ID: 294] FILM: "Spider-Man: Brand New Day" | REGION: USA | PROJECTED: $1.2B | STATUS: 2026 Blockbuster
+[ID: 295] FILM: "Bhoot Bangla" | REGION: India (Hindi) | PROJECTED: ₹150 Cr | STATUS: Comedy Horror
+[ID: 296] FILM: "The Mummy" (Reboot) | REGION: USA | PROJECTED: $75M | STATUS: Low Interest
+[ID: 297] FILM: "Jumanji 3" | REGION: USA | PROJECTED: $800M | STATUS: Tentpole
+[ID: 298] FILM: "Housefull 5" | REGION: India (Hindi) | GROSS: ₹289 Cr | STATUS: Profitable
+[ID: 299] FILM: "Project Hail Mary" | REGION: USA | PROJECTED: $300M | STATUS: Sci-Fi Hope
+[ID: 300] FILM: "Avengers: Doomsday" | REGION: USA | PROJECTED: $2.0B+ | STATUS: Return[ID: 290] FILM: "Welcome to the Jungle" | REGION: India (Hindi) | GROSS: ₹200 Cr | STATUS: Average
+[ID: 291] FILM: "Aadu 3" | REGION: India (Malayalam) | GROSS: ₹111 Cr | STATUS: Hit
+[ID: 292] FILM: "Dune: Part Three" | REGION: USA | PROJECTED: $850,000,000 | STATUS: Highly Anticipated
+[ID: 293] FILM: "King" | REGION: India (Hindi) | PROJECTED: ₹700 Cr | STATUS: SRK Comeback 2026
+[ID: 294] FILM: "Spider-Man: Brand New Day" | REGION: USA | PROJECTED: $1.2B | STATUS: 2026 Blockbuster
+[ID: 295] FILM: "Bhoot Bangla" | REGION: India (Hindi) | PROJECTED: ₹150 Cr | STATUS: Comedy Horror
+[ID: 296] FILM: "The Mummy" (Reboot) | REGION: USA | PROJECTED: $75M | STATUS: Low Interest
+[ID: 297] FILM: "Jumanji 3" | REGION: USA | PROJECTED: $800M | STATUS: Tentpole
+[ID: 298] FILM: "Housefull 5" | REGION: India (Hindi) | GROSS: ₹289 Cr | STATUS: Profitable
+[ID: 299] FILM: "Project Hail Mary" | REGION: USA | PROJECTED: $300M | STATUS: Sci-Fi Hope
+[ID: 300] FILM: "Avengers: Doomsday" | REGION: USA | PROJECTED: $2.0B+ | STATUS: Return[ID: 290] FILM: "Welcome to the Jungle" | REGION: India (Hindi) | GROSS: ₹200 Cr | STATUS: Average
+[ID: 291] FILM: "Aadu 3" | REGION: India (Malayalam) | GROSS: ₹111 Cr | STATUS: Hit
+[ID: 292] FILM: "Dune: Part Three" | REGION: USA | PROJECTED: $850,000,000 | STATUS: Highly Anticipated
+[ID: 293] FILM: "King" | REGION: India (Hindi) | PROJECTED: ₹700 Cr | STATUS: SRK Comeback 2026
+[ID: 294] FILM: "Spider-Man: Brand New Day" | REGION: USA | PROJECTED: $1.2B | STATUS: 2026 Blockbuster
+[ID: 295] FILM: "Bhoot Bangla" | REGION: India (Hindi) | PROJECTED: ₹150 Cr | STATUS: Comedy Horror
+[ID: 296] FILM: "The Mummy" (Reboot) | REGION: USA | PROJECTED: $75M | STATUS: Low Interest
+[ID: 297] FILM: "Jumanji 3" | REGION: USA | PROJECTED: $800M | STATUS: Tentpole
+[ID: 298] FILM: "Housefull 5" | REGION: India (Hindi) | GROSS: ₹289 Cr | STATUS: Profitable
+[ID: 299] FILM: "Project Hail Mary" | REGION: USA | PROJECTED: $300M | STATUS: Sci-Fi Hope
+[ID: 300] FILM: "Avengers: Doomsday" | REGION: USA | PROJECTED: $2.0B+ | STATUS: Return
+[ID: 290] FILM: "Welcome to the Jungle" | REGION: India (Hindi) | GROSS: ₹200 Cr | STATUS: Average[ID: 200] FILM: "Drishyam 3" | REGION: India (Hindi) | PROJECTED: ₹400 Cr | STATUS: Safe Bet
+[ID: 201] FILM: "The Mandalorian & Grogu" | REGION: USA | PROJECTED: $250,000,000 | STATUS: Disney+ to Cinema
+[ID: 290] FILM: "Welcome to the Jungle" | REGION: India (Hindi) | GROSS: ₹200 Cr | STATUS: Average
+[ID: 291] FILM: "Aadu 3" | REGION: India (Malayalam) | GROSS: ₹111 Cr | STATUS: Hit
+[ID: 292] FILM: "Dune: Part Three" | REGION: USA | PROJECTED: $850,000,000 | STATUS: Highly Anticipated
+[ID: 293] FILM: "King" | REGION: India (Hindi) | PROJECTED: ₹700 Cr | STATUS: SRK Comeback 2026
+[ID: 294] FILM: "Spider-Man: Brand New Day" | REGION: USA | PROJECTED: $1.2B | STATUS: 2026 Blockbuster
+[ID: 295] FILM: "Bhoot Bangla" | REGION: India (Hindi) | PROJECTED: ₹150 Cr | STATUS: Comedy Horror
+[ID: 296] FILM: "The Mummy" (Reboot) | REGION: USA | PROJECTED: $75M | STATUS: Low Interest
+[ID: 297] FILM: "Jumanji 3" | REGION: USA | PROJECTED: $800M | STATUS: Tentpole
+[ID: 298] FILM: "Housefull 5" | REGION: India (Hindi) | GROSS: ₹289 Cr | STATUS: Profitable
+[ID: 299] FILM: "Project Hail Mary" | REGION: USA | PROJECTED: $300M | STATUS: Sci-Fi Hope
+[ID: 300] FILM: "Avengers: Doomsday" | REGION: USA | PROJECTED: $2.0B+ | STATUS: Return[ID: 290] FILM: "Welcome to the Jungle" | REGION: India (Hindi) | GROSS: ₹200 Cr | STATUS: Average
+[ID: 291] FILM: "Aadu 3" | REGION: India (Malayalam) | GROSS: ₹111 Cr | STATUS: Hit
+[ID: 292] FILM: "Dune: Part Three" | REGION: USA | PROJECTED: $850,000,000 | STATUS: Highly Anticipated
+[ID: 293] FILM: "King" | REGION: India (Hindi) | PROJECTED: ₹700 Cr | STATUS: SRK Comeback 2026
+[ID: 294] FILM: "Spider-Man: Brand New Day" | REGION: USA | PROJECTED: $1.2B | STATUS: 2026 Blockbuster
+[ID: 295] FILM: "Bhoot Bangla" | REGION: India (Hindi) | PROJECTED: ₹150 Cr | STATUS: Comedy Horror
+[ID: 296] FILM: "The Mummy" (Reboot) | REGION: USA | PROJECTED: $75M | STATUS: Low Interest
+[ID: 297] FILM: "Jumanji 3" | REGION: USA | PROJECTED: $800M | STATUS: Tentpole
+[ID: 298] FILM: "Housefull 5" | REGION: India (Hindi) | GROSS: ₹289 Cr | STATUS: Profitable
+[ID: 299] FILM: "Project Hail Mary" | REGION: USA | PROJECTED: $300M | STATUS: Sci-Fi Hope
+[ID: 300] FILM: "Avengers: Doomsday" | REGION: USA | PROJECTED: $2.0B+ | STATUS: Return[ID: 290] FILM: "Welcome to the Jungle" | REGION: India (Hindi) | GROSS: ₹200 Cr | STATUS: Average
+[ID: 291] FILM: "Aadu 3" | REGION: India (Malayalam) | GROSS: ₹111 Cr | STATUS: Hit
+[ID: 292] FILM: "Dune: Part Three" | REGION: USA | PROJECTED: $850,000,000 | STATUS: Highly Anticipated
+[ID: 293] FILM: "King" | REGION: India (Hindi) | PROJECTED: ₹700 Cr | STATUS: SRK Comeback 2026
+[ID: 294] FILM: "Spider-Man: Brand New Day" | REGION: USA | PROJECTED: $1.2B | STATUS: 2026 Blockbuster
+[ID: 295] FILM: "Bhoot Bangla" | REGION: India (Hindi) | PROJECTED: ₹150 Cr | STATUS: Comedy Horror
+[ID: 296] FILM: "The Mummy" (Reboot) | REGION: USA | PROJECTED: $75M | STATUS: Low Interest
+[ID: 297] FILM: "Jumanji 3" | REGION: USA | PROJECTED: $800M | STATUS: Tentpole
+[ID: 298] FILM: "Housefull 5" | REGION: India (Hindi) | GROSS: ₹289 Cr | STATUS: Profitable
+[ID: 299] FILM: "Project Hail Mary" | REGION: USA | PROJECTED: $300M | STATUS: Sci-Fi Hope
+[ID: 300] FILM: "Avengers: Doomsday" | REGION: USA | PROJECTED: $2.0B+ | STATUS: Return
+[ID: 290] FILM: "Welcome to the Jungle" | REGION: India (Hindi) | GROSS: ₹200 Cr | STATUS: Average[ID: 200] FILM: "Drishyam 3" | REGION: India (Hindi) | PROJECTED: ₹400 Cr | STATUS: Safe Bet
+[ID: 201] FILM: "The Mandalorian & Grogu" | REGION: USA | PROJECTED: $250,000,000 | STATUS: Disney+ to Cinema
+[ID: 290] FILM: "Welcome to the Jungle" | REGION: India (Hindi) | GROSS: ₹200 Cr | STATUS: Average
+[ID: 291] FILM: "Aadu 3" | REGION: India (Malayalam) | GROSS: ₹111 Cr | STATUS: Hit
+[ID: 292] FILM: "Dune: Part Three" | REGION: USA | PROJECTED: $850,000,000 | STATUS: Highly Anticipated
+[ID: 293] FILM: "King" | REGION: India (Hindi) | PROJECTED: ₹700 Cr | STATUS: SRK Comeback 2026
+[ID: 294] FILM: "Spider-Man: Brand New Day" | REGION: USA | PROJECTED: $1.2B | STATUS: 2026 Blockbuster
+[ID: 295] FILM: "Bhoot Bangla" | REGION: India (Hindi) | PROJECTED: ₹150 Cr | STATUS: Comedy Horror
+[ID: 296] FILM: "The Mummy" (Reboot) | REGION: USA | PROJECTED: $75M | STATUS: Low Interest
+[ID: 297] FILM: "Jumanji 3" | REGION: USA | PROJECTED: $800M | STATUS: Tentpole
+[ID: 298] FILM: "Housefull 5" | REGION: India (Hindi) | GROSS: ₹289 Cr | STATUS: Profitable
+[ID: 299] FILM: "Project Hail Mary" | REGION: USA | PROJECTED: $300M | STATUS: Sci-Fi Hope
+[ID: 300] FILM: "Avengers: Doomsday" | REGION: USA | PROJECTED: $2.0B+ | STATUS: Return[ID: 290] FILM: "Welcome to the Jungle" | REGION: India (Hindi) | GROSS: ₹200 Cr | STATUS: Average
+[ID: 291] FILM: "Aadu 3" | REGION: India (Malayalam) | GROSS: ₹111 Cr | STATUS: Hit
+[ID: 292] FILM: "Dune: Part Three" | REGION: USA | PROJECTED: $850,000,000 | STATUS: Highly Anticipated
+[ID: 293] FILM: "King" | REGION: India (Hindi) | PROJECTED: ₹700 Cr | STATUS: SRK Comeback 2026
+[ID: 294] FILM: "Spider-Man: Brand New Day" | REGION: USA | PROJECTED: $1.2B | STATUS: 2026 Blockbuster
+[ID: 295] FILM: "Bhoot Bangla" | REGION: India (Hindi) | PROJECTED: ₹150 Cr | STATUS: Comedy Horror
+[ID: 296] FILM: "The Mummy" (Reboot) | REGION: USA | PROJECTED: $75M | STATUS: Low Interest
+[ID: 297] FILM: "Jumanji 3" | REGION: USA | PROJECTED: $800M | STATUS: Tentpole
+[ID: 298] FILM: "Housefull 5" | REGION: India (Hindi) | GROSS: ₹289 Cr | STATUS: Profitable
+[ID: 299] FILM: "Project Hail Mary" | REGION: USA | PROJECTED: $300M | STATUS: Sci-Fi Hope
+[ID: 300] FILM: "Avengers: Doomsday" | REGION: USA | PROJECTED: $2.0B+ | STATUS: Return[ID: 290] FILM: "Welcome to the Jungle" | REGION: India (Hindi) | GROSS: ₹200 Cr | STATUS: Average
+[ID: 291] FILM: "Aadu 3" | REGION: India (Malayalam) | GROSS: ₹111 Cr | STATUS: Hit
+[ID: 292] FILM: "Dune: Part Three" | REGION: USA | PROJECTED: $850,000,000 | STATUS: Highly Anticipated
+[ID: 293] FILM: "King" | REGION: India (Hindi) | PROJECTED: ₹700 Cr | STATUS: SRK Comeback 2026
+[ID: 294] FILM: "Spider-Man: Brand New Day" | REGION: USA | PROJECTED: $1.2B | STATUS: 2026 Blockbuster
+[ID: 295] FILM: "Bhoot Bangla" | REGION: India (Hindi) | PROJECTED: ₹150 Cr | STATUS: Comedy Horror
+[ID: 296] FILM: "The Mummy" (Reboot) | REGION: USA | PROJECTED: $75M | STATUS: Low Interest
+[ID: 297] FILM: "Jumanji 3" | REGION: USA | PROJECTED: $800M | STATUS: Tentpole
+[ID: 298] FILM: "Housefull 5" | REGION: India (Hindi) | GROSS: ₹289 Cr | STATUS: Profitable
+[ID: 299] FILM: "Project Hail Mary" | REGION: USA | PROJECTED: $300M | STATUS: Sci-Fi Hope
+[ID: 300] FILM: "Avengers: Doomsday" | REGION: USA | PROJECTED: $2.0B+ | STATUS: Return
+[ID: 290] FILM: "Welcome to the Jungle" | REGION: India (Hindi) | GROSS: ₹200 Cr | STATUS: Average[ID: 200] FILM: "Drishyam 3" | REGION: India (Hindi) | PROJECTED: ₹400 Cr | STATUS: Safe Bet
+[ID: 201] FILM: "The Mandalorian & Grogu" | REGION: USA | PROJECTED: $250,000,000 | STATUS: Disney+ to Cinema
+[ID: 290] FILM: "Welcome to the Jungle" | REGION: India (Hindi) | GROSS: ₹200 Cr | STATUS: Average
+[ID: 291] FILM: "Aadu 3" | REGION: India (Malayalam) | GROSS: ₹111 Cr | STATUS: Hit
+[ID: 292] FILM: "Dune: Part Three" | REGION: USA | PROJECTED: $850,000,000 | STATUS: Highly Anticipated
+[ID: 293] FILM: "King" | REGION: India (Hindi) | PROJECTED: ₹700 Cr | STATUS: SRK Comeback 2026
+[ID: 294] FILM: "Spider-Man: Brand New Day" | REGION: USA | PROJECTED: $1.2B | STATUS: 2026 Blockbuster
+[ID: 295] FILM: "Bhoot Bangla" | REGION: India (Hindi) | PROJECTED: ₹150 Cr | STATUS: Comedy Horror
+[ID: 296] FILM: "The Mummy" (Reboot) | REGION: USA | PROJECTED: $75M | STATUS: Low Interest
+[ID: 297] FILM: "Jumanji 3" | REGION: USA | PROJECTED: $800M | STATUS: Tentpole
+[ID: 298] FILM: "Housefull 5" | REGION: India (Hindi) | GROSS: ₹289 Cr | STATUS: Profitable
+[ID: 299] FILM: "Project Hail Mary" | REGION: USA | PROJECTED: $300M | STATUS: Sci-Fi Hope
+[ID: 300] FILM: "Avengers: Doomsday" | REGION: USA | PROJECTED: $2.0B+ | STATUS: Return[ID: 290] FILM: "Welcome to the Jungle" | REGION: India (Hindi) | GROSS: ₹200 Cr | STATUS: Average
+[ID: 291] FILM: "Aadu 3" | REGION: India (Malayalam) | GROSS: ₹111 Cr | STATUS: Hit
+[ID: 292] FILM: "Dune: Part Three" | REGION: USA | PROJECTED: $850,000,000 | STATUS: Highly Anticipated
+[ID: 293] FILM: "King" | REGION: India (Hindi) | PROJECTED: ₹700 Cr | STATUS: SRK Comeback 2026
+[ID: 294] FILM: "Spider-Man: Brand New Day" | REGION: USA | PROJECTED: $1.2B | STATUS: 2026 Blockbuster
+[ID: 295] FILM: "Bhoot Bangla" | REGION: India (Hindi) | PROJECTED: ₹150 Cr | STATUS: Comedy Horror
+[ID: 296] FILM: "The Mummy" (Reboot) | REGION: USA | PROJECTED: $75M | STATUS: Low Interest
+[ID: 297] FILM: "Jumanji 3" | REGION: USA | PROJECTED: $800M | STATUS: Tentpole
+[ID: 298] FILM: "Housefull 5" | REGION: India (Hindi) | GROSS: ₹289 Cr | STATUS: Profitable
+[ID: 299] FILM: "Project Hail Mary" | REGION: USA | PROJECTED: $300M | STATUS: Sci-Fi Hope
+[ID: 300] FILM: "Avengers: Doomsday" | REGION: USA | PROJECTED: $2.0B+ | STATUS: Return[ID: 290] FILM: "Welcome to the Jungle" | REGION: India (Hindi) | GROSS: ₹200 Cr | STATUS: Average
+[ID: 291] FILM: "Aadu 3" | REGION: India (Malayalam) | GROSS: ₹111 Cr | STATUS: Hit
+[ID: 292] FILM: "Dune: Part Three" | REGION: USA | PROJECTED: $850,000,000 | STATUS: Highly Anticipated
+[ID: 293] FILM: "King" | REGION: India (Hindi) | PROJECTED: ₹700 Cr | STATUS: SRK Comeback 2026
+[ID: 294] FILM: "Spider-Man: Brand New Day" | REGION: USA | PROJECTED: $1.2B | STATUS: 2026 Blockbuster
+[ID: 295] FILM: "Bhoot Bangla" | REGION: India (Hindi) | PROJECTED: ₹150 Cr | STATUS: Comedy Horror
+[ID: 296] FILM: "The Mummy" (Reboot) | REGION: USA | PROJECTED: $75M | STATUS: Low Interest
+[ID: 297] FILM: "Jumanji 3" | REGION: USA | PROJECTED: $800M | STATUS: Tentpole
+[ID: 298] FILM: "Housefull 5" | REGION: India (Hindi) | GROSS: ₹289 Cr | STATUS: Profitable
+[ID: 299] FILM: "Project Hail Mary" | REGION: USA | PROJECTED: $300M | STATUS: Sci-Fi Hope
+[ID: 300] FILM: "Avengers: Doomsday" | REGION: USA | PROJECTED: $2.0B+ | STATUS: Return
+[ID: 290] FILM: "Welcome to the Jungle" | REGION: India (Hindi) | GROSS: ₹200 Cr | STATUS: Average[ID: 200] FILM: "Drishyam 3" | REGION: India (Hindi) | PROJECTED: ₹400 Cr | STATUS: Safe Bet
+[ID: 201] FILM: "The Mandalorian & Grogu" | REGION: USA | PROJECTED: $250,000,000 | STATUS: Disney+ to Cinema
+[ID: 290] FILM: "Welcome to the Jungle" | REGION: India (Hindi) | GROSS: ₹200 Cr | STATUS: Average
+[ID: 291] FILM: "Aadu 3" | REGION: India (Malayalam) | GROSS: ₹111 Cr | STATUS: Hit
+[ID: 292] FILM: "Dune: Part Three" | REGION: USA | PROJECTED: $850,000,000 | STATUS: Highly Anticipated
+[ID: 293] FILM: "King" | REGION: India (Hindi) | PROJECTED: ₹700 Cr | STATUS: SRK Comeback 2026
+[ID: 294] FILM: "Spider-Man: Brand New Day" | REGION: USA | PROJECTED: $1.2B | STATUS: 2026 Blockbuster
+[ID: 295] FILM: "Bhoot Bangla" | REGION: India (Hindi) | PROJECTED: ₹150 Cr | STATUS: Comedy Horror
+[ID: 296] FILM: "The Mummy" (Reboot) | REGION: USA | PROJECTED: $75M | STATUS: Low Interest
+[ID: 297] FILM: "Jumanji 3" | REGION: USA | PROJECTED: $800M | STATUS: Tentpole
+[ID: 298] FILM: "Housefull 5" | REGION: India (Hindi) | GROSS: ₹289 Cr | STATUS: Profitable
+[ID: 299] FILM: "Project Hail Mary" | REGION: USA | PROJECTED: $300M | STATUS: Sci-Fi Hope
+[ID: 300] FILM: "Avengers: Doomsday" | REGION: USA | PROJECTED: $2.0B+ | STATUS: Return[ID: 290] FILM: "Welcome to the Jungle" | REGION: India (Hindi) | GROSS: ₹200 Cr | STATUS: Average
+[ID: 291] FILM: "Aadu 3" | REGION: India (Malayalam) | GROSS: ₹111 Cr | STATUS: Hit
+[ID: 292] FILM: "Dune: Part Three" | REGION: USA | PROJECTED: $850,000,000 | STATUS: Highly Anticipated
+[ID: 293] FILM: "King" | REGION: India (Hindi) | PROJECTED: ₹700 Cr | STATUS: SRK Comeback 2026
+[ID: 294] FILM: "Spider-Man: Brand New Day" | REGION: USA | PROJECTED: $1.2B | STATUS: 2026 Blockbuster
+[ID: 295] FILM: "Bhoot Bangla" | REGION: India (Hindi) | PROJECTED: ₹150 Cr | STATUS: Comedy Horror
+[ID: 296] FILM: "The Mummy" (Reboot) | REGION: USA | PROJECTED: $75M | STATUS: Low Interest
+[ID: 297] FILM: "Jumanji 3" | REGION: USA | PROJECTED: $800M | STATUS: Tentpole
+[ID: 298] FILM: "Housefull 5" | REGION: India (Hindi) | GROSS: ₹289 Cr | STATUS: Profitable
+[ID: 299] FILM: "Project Hail Mary" | REGION: USA | PROJECTED: $300M | STATUS: Sci-Fi Hope
+[ID: 300] FILM: "Avengers: Doomsday" | REGION: USA | PROJECTED: $2.0B+ | STATUS: Return[ID: 290] FILM: "Welcome to the Jungle" | REGION: India (Hindi) | GROSS: ₹200 Cr | STATUS: Average
+[ID: 291] FILM: "Aadu 3" | REGION: India (Malayalam) | GROSS: ₹111 Cr | STATUS: Hit
+[ID: 292] FILM: "Dune: Part Three" | REGION: USA | PROJECTED: $850,000,000 | STATUS: Highly Anticipated
+[ID: 293] FILM: "King" | REGION: India (Hindi) | PROJECTED: ₹700 Cr | STATUS: SRK Comeback 2026
+[ID: 294] FILM: "Spider-Man: Brand New Day" | REGION: USA | PROJECTED: $1.2B | STATUS: 2026 Blockbuster
+[ID: 295] FILM: "Bhoot Bangla" | REGION: India (Hindi) | PROJECTED: ₹150 Cr | STATUS: Comedy Horror
+[ID: 296] FILM: "The Mummy" (Reboot) | REGION: USA | PROJECTED: $75M | STATUS: Low Interest
+[ID: 297] FILM: "Jumanji 3" | REGION: USA | PROJECTED: $800M | STATUS: Tentpole
+[ID: 298] FILM: "Housefull 5" | REGION: India (Hindi) | GROSS: ₹289 Cr | STATUS: Profitable
+[ID: 299] FILM: "Project Hail Mary" | REGION: USA | PROJECTED: $300M | STATUS: Sci-Fi Hope
+[ID: 300] FILM: "Avengers: Doomsday" | REGION: USA | PROJECTED: $2.0B+ | STATUS: Return
+[ID: 290] FILM: "Welcome to the Jungle" | REGION: India (Hindi) | GROSS: ₹200 Cr | STATUS: Average[ID: 200] FILM: "Drishyam 3" | REGION: India (Hindi) | PROJECTED: ₹400 Cr | STATUS: Safe Bet
+[ID: 201] FILM: "The Mandalorian & Grogu" | REGION: USA | PROJECTED: $250,000,000 | STATUS: Disney+ to Cinema
+[ID: 290] FILM: "Welcome to the Jungle" | REGION: India (Hindi) | GROSS: ₹200 Cr | STATUS: Average
+[ID: 291] FILM: "Aadu 3" | REGION: India (Malayalam) | GROSS: ₹111 Cr | STATUS: Hit
+[ID: 292] FILM: "Dune: Part Three" | REGION: USA | PROJECTED: $850,000,000 | STATUS: Highly Anticipated
+[ID: 293] FILM: "King" | REGION: India (Hindi) | PROJECTED: ₹700 Cr | STATUS: SRK Comeback 2026
+[ID: 294] FILM: "Spider-Man: Brand New Day" | REGION: USA | PROJECTED: $1.2B | STATUS: 2026 Blockbuster
+[ID: 295] FILM: "Bhoot Bangla" | REGION: India (Hindi) | PROJECTED: ₹150 Cr | STATUS: Comedy Horror
+[ID: 296] FILM: "The Mummy" (Reboot) | REGION: USA | PROJECTED: $75M | STATUS: Low Interest
+[ID: 297] FILM: "Jumanji 3" | REGION: USA | PROJECTED: $800M | STATUS: Tentpole
+[ID: 298] FILM: "Housefull 5" | REGION: India (Hindi) | GROSS: ₹289 Cr | STATUS: Profitable
+[ID: 299] FILM: "Project Hail Mary" | REGION: USA | PROJECTED: $300M | STATUS: Sci-Fi Hope
+[ID: 300] FILM: "Avengers: Doomsday" | REGION: USA | PROJECTED: $2.0B+ | STATUS: Return[ID: 290] FILM: "Welcome to the Jungle" | REGION: India (Hindi) | GROSS: ₹200 Cr | STATUS: Average
+[ID: 291] FILM: "Aadu 3" | REGION: India (Malayalam) | GROSS: ₹111 Cr | STATUS: Hit
+[ID: 292] FILM: "Dune: Part Three" | REGION: USA | PROJECTED: $850,000,000 | STATUS: Highly Anticipated
+[ID: 293] FILM: "King" | REGION: India (Hindi) | PROJECTED: ₹700 Cr | STATUS: SRK Comeback 2026
+[ID: 294] FILM: "Spider-Man: Brand New Day" | REGION: USA | PROJECTED: $1.2B | STATUS: 2026 Blockbuster
+[ID: 295] FILM: "Bhoot Bangla" | REGION: India (Hindi) | PROJECTED: ₹150 Cr | STATUS: Comedy Horror
+[ID: 296] FILM: "The Mummy" (Reboot) | REGION: USA | PROJECTED: $75M | STATUS: Low Interest
+[ID: 297] FILM: "Jumanji 3" | REGION: USA | PROJECTED: $800M | STATUS: Tentpole
+[ID: 298] FILM: "Housefull 5" | REGION: India (Hindi) | GROSS: ₹289 Cr | STATUS: Profitable
+[ID: 299] FILM: "Project Hail Mary" | REGION: USA | PROJECTED: $300M | STATUS: Sci-Fi Hope
+[ID: 300] FILM: "Avengers: Doomsday" | REGION: USA | PROJECTED: $2.0B+ | STATUS: Return[ID: 290] FILM: "Welcome to the Jungle" | REGION: India (Hindi) | GROSS: ₹200 Cr | STATUS: Average
+[ID: 291] FILM: "Aadu 3" | REGION: India (Malayalam) | GROSS: ₹111 Cr | STATUS: Hit
+[ID: 292] FILM: "Dune: Part Three" | REGION: USA | PROJECTED: $850,000,000 | STATUS: Highly Anticipated
+[ID: 293] FILM: "King" | REGION: India (Hindi) | PROJECTED: ₹700 Cr | STATUS: SRK Comeback 2026
+[ID: 294] FILM: "Spider-Man: Brand New Day" | REGION: USA | PROJECTED: $1.2B | STATUS: 2026 Blockbuster
+[ID: 295] FILM: "Bhoot Bangla" | REGION: India (Hindi) | PROJECTED: ₹150 Cr | STATUS: Comedy Horror
+[ID: 296] FILM: "The Mummy" (Reboot) | REGION: USA | PROJECTED: $75M | STATUS: Low Interest
+[ID: 297] FILM: "Jumanji 3" | REGION: USA | PROJECTED: $800M | STATUS: Tentpole
+[ID: 298] FILM: "Housefull 5" | REGION: India (Hindi) | GROSS: ₹289 Cr | STATUS: Profitable
+[ID: 299] FILM: "Project Hail Mary" | REGION: USA | PROJECTED: $300M | STATUS: Sci-Fi Hope
+[ID: 300] FILM: "Avengers: Doomsday" | REGION: USA | PROJECTED: $2.0B+ | STATUS: Return
+[ID: 290] FILM: "Welcome to the Jungle" | REGION: India (Hindi) | GROSS: ₹200 Cr | STATUS: Average
+[ID: 200] FILM: "Drishyam 3" | REGION: India (Hindi) | PROJECTED: ₹400 Cr | STATUS: Safe Bet
+[ID: 201] FILM: "The Mandalorian & Grogu" | REGION: USA | PROJECTED: $250,000,000 | STATUS: Disney+ to Cinema
+[ID: 290] FILM: "Welcome to the Jungle" | REGION: India (Hindi) | GROSS: ₹200 Cr | STATUS: Average
+[ID: 291] FILM: "Aadu 3" | REGION: India (Malayalam) | GROSS: ₹111 Cr | STATUS: Hit
+[ID: 292] FILM: "Dune: Part Three" | REGION: USA | PROJECTED: $850,000,000 | STATUS: Highly Anticipated
+[ID: 293] FILM: "King" | REGION: India (Hindi) | PROJECTED: ₹700 Cr | STATUS: SRK Comeback 2026
+[ID: 294] FILM: "Spider-Man: Brand New Day" | REGION: USA | PROJECTED: $1.2B | STATUS: 2026 Blockbuster
+[ID: 295] FILM: "Bhoot Bangla" | REGION: India (Hindi) | PROJECTED: ₹150 Cr | STATUS: Comedy Horror
+[ID: 296] FILM: "The Mummy" (Reboot) | REGION: USA | PROJECTED: $75M | STATUS: Low Interest
+[ID: 297] FILM: "Jumanji 3" | REGION: USA | PROJECTED: $800M | STATUS: Tentpole
+[ID: 298] FILM: "Housefull 5" | REGION: India (Hindi) | GROSS: ₹289 Cr | STATUS: Profitable
+[ID: 299] FILM: "Project Hail Mary" | REGION: USA | PROJECTED: $300M | STATUS: Sci-Fi Hope
+[ID: 300] FILM: "Avengers: Doomsday" | REGION: USA | PROJECTED: $2.0B+ | STATUS: Return[ID: 290] FILM: "Welcome to the Jungle" | REGION: India (Hindi) | GROSS: ₹200 Cr | STATUS: Average
+[ID: 291] FILM: "Aadu 3" | REGION: India (Malayalam) | GROSS: ₹111 Cr | STATUS: Hit
+[ID: 292] FILM: "Dune: Part Three" | REGION: USA | PROJECTED: $850,000,000 | STATUS: Highly Anticipated
+[ID: 293] FILM: "King" | REGION: India (Hindi) | PROJECTED: ₹700 Cr | STATUS: SRK Comeback 2026
+[ID: 294] FILM: "Spider-Man: Brand New Day" | REGION: USA | PROJECTED: $1.2B | STATUS: 2026 Blockbuster
+[ID: 295] FILM: "Bhoot Bangla" | REGION: India (Hindi) | PROJECTED: ₹150 Cr | STATUS: Comedy Horror
+[ID: 296] FILM: "The Mummy" (Reboot) | REGION: USA | PROJECTED: $75M | STATUS: Low Interest
+[ID: 297] FILM: "Jumanji 3" | REGION: USA | PROJECTED: $800M | STATUS: Tentpole
+[ID: 298] FILM: "Housefull 5" | REGION: India (Hindi) | GROSS: ₹289 Cr | STATUS: Profitable
+[ID: 299] FILM: "Project Hail Mary" | REGION: USA | PROJECTED: $300M | STATUS: Sci-Fi Hope
+[ID: 300] FILM: "Avengers: Doomsday" | REGION: USA | PROJECTED: $2.0B+ | STATUS: Return[ID: 290] FILM: "Welcome to the Jungle" | REGION: India (Hindi) | GROSS: ₹200 Cr | STATUS: Average
+[ID: 291] FILM: "Aadu 3" | REGION: India (Malayalam) | GROSS: ₹111 Cr | STATUS: Hit
+[ID: 292] FILM: "Dune: Part Three" | REGION: USA | PROJECTED: $850,000,000 | STATUS: Highly Anticipated
+[ID: 293] FILM: "King" | REGION: India (Hindi) | PROJECTED: ₹700 Cr | STATUS: SRK Comeback 2026
+[ID: 294] FILM: "Spider-Man: Brand New Day" | REGION: USA | PROJECTED: $1.2B | STATUS: 2026 Blockbuster
+[ID: 295] FILM: "Bhoot Bangla" | REGION: India (Hindi) | PROJECTED: ₹150 Cr | STATUS: Comedy Horror
+[ID: 296] FILM: "The Mummy" (Reboot) | REGION: USA | PROJECTED: $75M | STATUS: Low Interest
+[ID: 297] FILM: "Jumanji 3" | REGION: USA | PROJECTED: $800M | STATUS: Tentpole
+[ID: 298] FILM: "Housefull 5" | REGION: India (Hindi) | GROSS: ₹289 Cr | STATUS: Profitable
+[ID: 299] FILM: "Project Hail Mary" | REGION: USA | PROJECTED: $300M | STATUS: Sci-Fi Hope
+[ID: 300] FILM: "Avengers: Doomsday" | REGION: USA | PROJECTED: $2.0B+ | STATUS: Return
+[ID: 290] FILM: "Welcome to the Jungle" | REGION: India (Hindi) | GROSS: ₹200 Cr | STATUS: Average
+[ID: 291] FILM: "Aadu 3" | REGION: India (Malayalam) | GROSS: ₹111 Cr | STATUS: Hit
+[ID: 292] FILM: "Dune: Part Three" | REGION: USA | PROJECTED: $850,000,000 | STATUS: Highly Anticipated
+[ID: 293] FILM: "King" | REGION: India (Hindi) | PROJECTED: ₹700 Cr | STATUS: SRK Comeback 2026
+[ID: 294] FILM: "Spider-Man: Brand New Day" | REGION: USA | PROJECTED: $1.2B | STATUS: 2026 Blockbuster
+[ID: 295] FILM: "Bhoot Bangla" | REGION: India (Hindi) | PROJECTED: ₹150 Cr | STATUS: Comedy Horror
+[ID: 296] FILM: "The Mummy" (Reboot) | REGION: USA | PROJECTED: $75M | STATUS: Low Interest
+[ID: 297] FILM: "Jumanji 3" | REGION: USA | PROJECTED: $800M | STATUS: Tentpole
+[ID: 298] FILM: "Housefull 5" | REGION: India (Hindi) | GROSS: ₹289 Cr | STATUS: Profitable
+[ID: 299] FILM: "Project Hail Mary" | REGION: USA | PROJECTED: $300M | STATUS: Sci-Fi Hope
+[ID: 300] FILM: "Avengers: Doomsday" | REGION: USA | PROJECTED: $2.0B+ | STATUS: Return of RDJ
+[SYSTEM_END] [DATA_DUMP_COMPLETE]
