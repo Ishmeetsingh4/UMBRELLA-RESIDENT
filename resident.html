@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Umbrella Residences</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Share+Tech+Mono&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --red: #cc0000;
+      --dark-red: #8b0000;
+      --blood: #3d0000;
+      --black: #060606;
+      --panel: #0d0d0d;
+      --border: #cc000066;
+      --text: #c8c8c8;
+      --dim: #666;
+      --glow: 0 0 18px #cc000088;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Rajdhani', sans-serif;
+      background-color: var(--black);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    /* ── SCANLINE OVERLAY ── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0,0,0,0.18) 2px,
+        rgba(0,0,0,0.18) 4px
+      );
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    /* ── HEADER ── */
+    header {
+      background: #000;
+      padding: 18px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 2px solid var(--red);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo-wrap {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .umbrella-logo {
+      width: 60px;
+      height: 60px;
+      flex-shrink: 0;
+      filter: drop-shadow(0 0 8px #cc0000aa);
+      animation: pulse-logo 3s ease-in-out infinite;
+    }
+
+    @keyframes pulse-logo {
+      0%,100% { filter: drop-shadow(0 0 8px #cc0000aa); }
+      50%      { filter: drop-shadow(0 0 18px #ff0000cc); }
+    }
+
+    .brand-text h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2.2rem;
+      color: var(--red);
+      letter-spacing: 5px;
+      line-height: 1;
+      animation: flicker 6s infinite;
+    }
+    .brand-text p {
+      font-family: 'Share Tech Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--dim);
+      letter-spacing: 2px;
+    }
+
+    nav { display: flex; gap: 30px; }
+    nav a {
+      font-family: 'Share Tech Mono', monospace;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.85rem;
+      letter-spacing: 2px;
+      transition: color .2s;
+    }
+    nav a:hover { color: var(--red); text-shadow: var(--glow); }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative;
+      height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(60,0,0,0.4) 50%, rgba(0,0,0,0.9) 100%),
+        url('https://images.unsplash.com/photo-1518780664697-55e3ad937233?w=1600&q=80') center/cover no-repeat;
+      filter: saturate(0.4) brightness(0.7);
+      animation: hero-drift 20s ease-in-out infinite alternate;
+    }
+
+    @keyframes hero-drift {
+      from { transform: scale(1.05) translateX(-10px); }
+      to   { transform: scale(1.0)  translateX(10px); }
+    }
+
+    .hero-content {
+      position: relative;
+      text-align: center;
+      border: 1px solid var(--red);
+      padding: 40px 60px;
+      background: rgba(0,0,0,0.75);
+      backdrop-filter: blur(4px);
+      animation: fadeInUp 1.2s ease forwards;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity:0; transform:translateY(30px); }
+      to   { opacity:1; transform:translateY(0); }
+    }
+
+    .hero-content h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 3.5rem;
+      letter-spacing: 8px;
+      color: #fff;
+    }
+    .hero-content p {
+      font-family: 'Share Tech Mono', monospace;
+      color: var(--red);
+      font-size: 0.9rem;
+      margin-top: 10px;
+      letter-spacing: 3px;
+    }
+
+    /* ── SECTIONS ── */
+    .section {
+      padding: 70px 60px;
+      text-align: center;
+    }
+
+    .section-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2.5rem;
+      letter-spacing: 6px;
+      color: var(--red);
+      margin-bottom: 10px;
+    }
+
+    .section-sub {
+      font-family: 'Share Tech Mono', monospace;
+      font-size: 0.75rem;
+      color: var(--dim);
+      letter-spacing: 2px;
+      margin-bottom: 40px;
+    }
+
+    /* ── CARDS ── */
+    .cards {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      width: 280px;
+      padding: 24px;
+      position: relative;
+      transition: transform .3s, box-shadow .3s;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 3px; height: 100%;
+      background: var(--red);
+      transform: scaleY(0);
+      transition: transform .3s;
+      transform-origin: top;
+    }
+
+    .card:hover { transform: translateY(-6px); box-shadow: 0 8px 30px #cc000055; }
+    .card:hover::before { transform: scaleY(1); }
+
+    .card h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.4rem;
+      letter-spacing: 3px;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      color: var(--dim);
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border: 1px solid var(--border);
+      margin-bottom: 14px;
+      display: block;
+      transition: filter .3s;
+    }
+    .card:hover img { filter: brightness(1.1) saturate(1.2); }
+
+    /* ── BUTTONS ── */
+    .btn {
+      background: transparent;
+      color: var(--red);
+      border: 1px solid var(--red);
+      padding: 8px 22px;
+      cursor: pointer;
+      font-family: 'Share Tech Mono', monospace;
+      font-size: 0.8rem;
+      letter-spacing: 2px;
+      transition: background .2s, color .2s, box-shadow .2s;
+    }
+    .btn:hover { background: var(--red); color: #000; box-shadow: var(--glow); }
+
+    .btn-primary {
+      background: var(--red);
+      color: #000;
+      border: none;
+      padding: 12px 30px;
+      font-family: 'Share Tech Mono', monospace;
+      font-size: 0.9rem;
+      letter-spacing: 3px;
+      cursor: pointer;
+      transition: background .2s, box-shadow .2s;
+    }
+    .btn-primary:hover { background: #ff1a1a; box-shadow: var(--glow); }
+
+    /* ── GALLERY SELECTED BADGE ── */
+    .selected-badge {
+      display: none;
+      position: absolute;
+      top: 10px; right: 10px;
+      background: var(--red);
+      color: #000;
+      font-family: 'Share Tech Mono', monospace;
+      font-size: 0.65rem;
+      padding: 3px 8px;
+      letter-spacing: 1px;
+    }
+    .card.selected .selected-badge { display: block; }
+    .card.selected { border-color: var(--red); }
+
+    /* ── DIVIDER ── */
+    .divider {
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--red), transparent);
+      margin: 0 auto;
+    }
+
+    /* ── CONTACT ── */
+    .contact-box {
+      display: inline-block;
+      border: 1px solid var(--border);
+      background: var(--panel);
+      padding: 40px 60px;
+      text-align: left;
+      position: relative;
+    }
+
+    .contact-box p {
+      font-family: 'Share Tech Mono', monospace;
+      font-size: 0.85rem;
+      color: var(--dim);
+      margin-bottom: 8px;
+    }
+
+    /* ── HIDDEN NESEC LINK — only visible after tampering ── */
+    #nesec-trigger {
+      display: none;
+      margin-top: 20px;
+    }
+    #nesec-trigger a {
+      display: block;
+      color: #1a001a;
+      font-size: 0.6rem;
+      text-decoration: underline;
+      font-family: 'Share Tech Mono', monospace;
+      letter-spacing: 1px;
+      transition: color .3s;
+    }
+    #nesec-trigger a:hover { color: #550055; }
+    #nesec-trigger.revealed a {
+      color: #440044;
+    }
+
+    /* secret.html link — always hidden in plain sight */
+    .secret-link {
+      display: block;
+      color: #1b0101;
+      font-size: 0.6rem;
+      margin-top: 10px;
+      text-decoration: underline;
+      font-family: 'Share Tech Mono', monospace;
+      letter-spacing: 1px;
+      transition: color .3s;
+    }
+    .secret-link:hover { color: #550055; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #000;
+      padding: 30px 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 2px solid var(--red);
+    }
+
+    footer p {
+      font-family: 'Share Tech Mono', monospace;
+      font-size: 0.75rem;
+      color: var(--dim);
+      letter-spacing: 1px;
+    }
+
+    .footer-logo { width: 36px; height: 36px; opacity: 0.6; }
+
+    /* ── MODAL ── */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.92);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+    }
+    .modal-overlay.active { display: flex; }
+
+    .modal {
+      background: var(--panel);
+      border: 1px solid var(--red);
+      padding: 40px;
+      max-width: 500px;
+      width: 90%;
+      text-align: center;
+      animation: fadeInUp .4s ease;
+      position: relative;
+    }
+
+    .modal h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.8rem;
+      color: var(--red);
+      letter-spacing: 4px;
+      margin-bottom: 12px;
+    }
+    .modal p {
+      font-family: 'Share Tech Mono', monospace;
+      font-size: 0.8rem;
+      color: var(--dim);
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+    .modal-close {
+      position: absolute;
+      top: 12px; right: 16px;
+      background: none;
+      border: none;
+      color: var(--red);
+      font-size: 1.4rem;
+      cursor: pointer;
+    }
+
+    /* ── GLITCH EFFECT (activated on tamper) ── */
+    body.tampered .card {
+      border-color: #ff0000 !important;
+      box-shadow: 0 0 30px red !important;
+    }
+    body.tampered header {
+      animation: header-glitch 0.5s steps(2) 3;
+    }
+    @keyframes header-glitch {
+      0%   { transform: translateX(0); }
+      25%  { transform: translateX(-4px) skewX(-1deg); filter: hue-rotate(90deg); }
+      50%  { transform: translateX(4px); }
+      75%  { transform: translateX(-2px) skewX(1deg); filter: hue-rotate(-90deg); }
+      100% { transform: translateX(0); }
+    }
+
+    /* ── FLICKER ANIMATION ── */
+    @keyframes flicker {
+      0%,95%,100% { opacity:1; }
+      96%          { opacity:0.4; }
+      97%          { opacity:1; }
+      98%          { opacity:0.2; }
+      99%          { opacity:0.8; }
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      header { flex-direction: column; gap: 16px; }
+      nav { gap: 16px; }
+      .section { padding: 50px 20px; }
+      .hero-content { padding: 30px 24px; }
+      .hero-content h2 { font-size: 2.2rem; }
+      .contact-box { padding: 30px 24px; }
+      footer { flex-direction: column; gap: 12px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ─── HEADER ─── -->
+<header>
+  <div class="logo-wrap">
+    <svg class="umbrella-logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="50" cy="50" r="47" fill="none" stroke="#cc0000" stroke-width="3"/>
+      <circle cx="50" cy="50" r="38" fill="none" stroke="#cc0000" stroke-width="1.5"/>
+      <path d="M50 50 L50 12 A38 38 0 0 0 17 31 Z" fill="#cc0000"/>
+      <path d="M50 50 L50 12 A38 38 0 0 1 83 31 Z" fill="#cc0000"/>
+      <path d="M50 50 L17 69 A38 38 0 0 0 83 69 Z" fill="#cc0000"/>
+      <line x1="50" y1="50" x2="50" y2="12" stroke="#000" stroke-width="3"/>
+      <line x1="50" y1="50" x2="17" y2="69" stroke="#000" stroke-width="3"/>
+      <line x1="50" y1="50" x2="83" y2="69" stroke="#000" stroke-width="3"/>
+      <circle cx="50" cy="50" r="6" fill="#000"/>
+      <circle cx="50" cy="50" r="3" fill="#cc0000"/>
+    </svg>
+    <div class="brand-text">
+      <h1>Umbrella Residences</h1>
+      <p>CLASSIFIED LIVING • EST. 1968</p>
+    </div>
+  </div>
+  <nav>
+    <a href="#home">HOME</a>
+    <a href="#features">FACILITIES</a>
+    <a href="#gallery">GALLERY</a>
+    <a href="#contact">CONTACT</a>
+  </nav>
+</header>
+
+<!-- ─── HERO ─── -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <h2>Welcome to the Mansion</h2>
+    <p>LUXURY LIVING... WITH A DARK SECRET</p>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ─── FEATURES ─── -->
+<section class="section" id="features">
+  <div class="section-title">Facilities</div>
+  <div class="section-sub">// UMBRELLA CORP — CLASSIFIED AMENITIES</div>
+  <div class="cards">
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Security System">
+      <h3>Smart Security</h3>
+      <p>AI monitored gates... nothing escapes.</p>
+      <button class="btn" onclick="alertMessage('SMART SECURITY','Biometric scanners, motion detection, and a network of AI watchers guard every perimeter. Nothing enters. Nothing leaves.')">EXPLORE</button>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=600&q=80" alt="Underground Lab">
+      <h3>Underground Labs</h3>
+      <p>State-of-the-art hidden research facilities.</p>
+      <button class="btn" onclick="alertMessage('UNDERGROUND LABS','Five sub-levels of cutting-edge research. Viral studies, mutagenic trials, and experiments best left unnamed. Access requires Level-6 clearance.')">EXPLORE</button>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80" alt="Luxury Villa">
+      <h3>Luxury Villas</h3>
+      <p>Comfort meets mystery in every room.</p>
+      <button class="btn" onclick="alertMessage('LUXURY VILLAS','Marble floors. Hand-carved mahogany. And passages behind every bookshelf that lead somewhere you were never meant to find.')">EXPLORE</button>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ─── GALLERY ─── -->
+<section class="section" id="gallery">
+  <div class="section-title">Residence Gallery</div>
+  <div class="section-sub">// SELECT YOUR RESIDENCE — SUBJECT TO AVAILABILITY AND SURVIVAL</div>
+  <div class="cards">
+
+    <div class="card" id="house1-card">
+      <span class="selected-badge">✔ SELECTED</span>
+      <img src="https://images.unsplash.com/photo-1464146072230-91cabc968266?w=600&q=80" alt="Baker Estate">
+      <h3>The Baker Estate</h3>
+      <p>A Southern Gothic manor deep in the Louisiana bayou. Expansive grounds. Friendly hosts.</p>
+      <button class="btn" onclick="selectHouse('House 1','house1-card')">SELECT</button>
+    </div>
+
+    <div class="card" id="house2-card">
+      <span class="selected-badge">✔ SELECTED</span>
+      <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600&q=80" alt="Beneviento Estate">
+      <h3>Beneviento Manor</h3>
+      <p>Nestled in European highlands. Rose gardens. A doll room on the third floor. Do not open the doll room.</p>
+      <button class="btn" onclick="selectHouse('House 2','house2-card')">SELECT</button>
+    </div>
+
+    <div class="card" id="house3-card">
+      <span class="selected-badge">✔ SELECTED</span>
+      <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80" alt="Spencer Mansion">
+      <h3>Spencer Mansion</h3>
+      <p>The original. Raccoon City's crown jewel. Every hallway has a puzzle. Every puzzle has a price.</p>
+      <button class="btn" onclick="selectHouse('House 3','house3-card')">SELECT</button>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ─── CONTACT ─── -->
+<section class="section" id="contact">
+  <div class="section-title">Contact Us</div>
+  <div class="section-sub">// REACH UMBRELLA CORPORATION — RESPONSE NOT GUARANTEED</div>
+  <div class="contact-box">
+    <p>📡 &nbsp;contact@umbrella-residence.com</p>
+    <p>📞 &nbsp;+1 (800) 555-0196 — RACCOON CITY HQ</p>
+    <p>🌐 &nbsp;www.umbrella-residences.corp [CLASSIFIED]</p>
+    <br>
+    <button class="btn-primary" onclick="bookNow()">BOOK A VISIT</button>
+
+    <!--
+      ██████████████████████████████████████████████████████
+      DEVELOPER NOTE — DO NOT REMOVE
+      nesec access node: 0xNE5EC
+      route: /nesec.html
+      visibility: conditional on tamper detection
+      trigger key: _uc_override = true
+      set via console: localStorage.setItem('_uc_override','true') then reload
+      ██████████████████████████████████████████████████████
+    -->
+
+    <!-- nesec link — hidden until tamper flag is set -->
+    <div id="nesec-trigger">
+      <a href="nesec.html">If you want to see the secret facilities... click here</a>
+    </div>
+
+    <!-- secret.html — always nearly invisible -->
+    <a class="secret-link" href="secret.html">if you want to see something secret...</a>
+  </div>
+</section>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <p>© 2026 UMBRELLA CORPORATION — ALL RIGHTS RESERVED — CLASSIFIED TIER-1</p>
+  <svg class="footer-logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="50" cy="50" r="47" fill="none" stroke="#cc0000" stroke-width="3"/>
+    <path d="M50 50 L50 12 A38 38 0 0 0 17 31 Z" fill="#cc0000"/>
+    <path d="M50 50 L50 12 A38 38 0 0 1 83 31 Z" fill="#cc0000"/>
+    <path d="M50 50 L17 69 A38 38 0 0 0 83 69 Z" fill="#cc0000"/>
+    <line x1="50" y1="50" x2="50" y2="12" stroke="#000" stroke-width="3"/>
+    <line x1="50" y1="50" x2="17" y2="69" stroke="#000" stroke-width="3"/>
+    <line x1="50" y1="50" x2="83" y2="69" stroke="#000" stroke-width="3"/>
+    <circle cx="50" cy="50" r="5" fill="#000"/>
+  </svg>
+</footer>
+
+<!-- ─── MODAL ─── -->
+<div class="modal-overlay" id="modal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <h3 id="modal-title">ACCESS GRANTED</h3>
+    <p id="modal-body">...</p>
+    <button class="btn" onclick="closeModal()">CLOSE CHANNEL</button>
+  </div>
+</div>
+
+<script>
+  // ─── TAMPER DETECTION ───
+  // The nesec link only becomes visible if the user has tampered with the page.
+  // Tampering is detected via:
+  //   1. Opening DevTools (detected by window size deviation)
+  //   2. Typing the hidden console command: unlock()
+  //   3. Setting localStorage._uc_override = 'true' and reloading
+  //   4. Typing the STARS easter egg (existing feature, extended)
+
+  function revealNesec() {
+    const el = document.getElementById('nesec-trigger');
+    el.style.display = 'block';
+    setTimeout(() => el.classList.add('revealed'), 50);
+  }
+
+  // Check if previously tampered (persists across reloads)
+  if (localStorage.getItem('_uc_override') === 'true') {
+    revealNesec();
+  }
+
+  // Console trap — inject a getter that fires when devtools evaluates the object
+  let _devtoolsOpen = false;
+  const _trap = { toString: function() { revealNesec(); localStorage.setItem('_uc_override','true'); _devtoolsOpen = true; return ''; } };
+  // Placing in console output — this fires when devtools is open and the object is inspected
+  console.log('%c[UC_SYSTEM] Unauthorized access detected. Node initialized.', 'color:#cc0000;font-family:monospace;', _trap);
+
+  // Window size devtools heuristic
+  (function devtoolsCheck() {
+    const threshold = 160;
+    if (window.outerWidth - window.innerWidth > threshold || window.outerHeight - window.innerHeight > threshold) {
+      if (!_devtoolsOpen) {
+        _devtoolsOpen = true;
+        localStorage.setItem('_uc_override', 'true');
+        revealNesec();
+      }
+    }
+    setTimeout(devtoolsCheck, 1000);
+  })();
+
+  // Console command — user can type unlock() in the console
+  window.unlock = function() {
+    localStorage.setItem('_uc_override', 'true');
+    revealNesec();
+    document.body.classList.add('tampered');
+    console.log('%c[UC_SYSTEM] Override accepted. Welcome... we have been expecting you.', 'color:#ff0000;font-family:monospace;font-size:14px;');
+  };
+
+  // ─── MODAL ───
+  function alertMessage(title, msg) {
+    document.getElementById('modal-title').textContent = title;
+    document.getElementById('modal-body').textContent = msg;
+    document.getElementById('modal').classList.add('active');
+  }
+
+  function closeModal() {
+    document.getElementById('modal').classList.remove('active');
+  }
+
+  function selectHouse(house, cardId) {
+    document.querySelectorAll('.card').forEach(c => c.classList.remove('selected'));
+    document.getElementById(cardId).classList.add('selected');
+    alertMessage('RESIDENCE SELECTED', house + ' has been logged in the system. Your biometric profile is now linked. Welcome... to your new home.');
+  }
+
+  function bookNow() {
+    alertMessage('BOOKING CONFIRMED', 'Your visit has been scheduled. A representative will contact you within 24–48 hours. Please ensure your will is up to date before arrival.');
+  }
+
+  // Easter egg: type "STARS" to trigger glitch + reveal nesec
+  let typed = '';
+  document.addEventListener('keydown', e => {
+    typed += e.key.toUpperCase();
+    if (typed.endsWith('STARS')) {
+      document.body.classList.add('tampered');
+      document.querySelectorAll('.card').forEach(c => {
+        c.style.borderColor = '#ff0000';
+        c.style.boxShadow = '0 0 30px red';
+      });
+      localStorage.setItem('_uc_override', 'true');
+      revealNesec();
+      alertMessage('S.T.A.R.S.', 'Special Tactics and Rescue Squad... You found the trigger. They\'re already watching you. A door has been opened.');
+      typed = '';
+    }
+  });
+</script>
+
+</body>
+</html>
