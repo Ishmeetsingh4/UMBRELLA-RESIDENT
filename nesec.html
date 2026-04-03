@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>UMBRELLA // CLASSIFIED TERMINAL</title>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=VT323&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --green: #00ff41;
+      --dim-green: #005910;
+      --dark: #020b04;
+      --panel: #030f05;
+      --red: #cc0000;
+      --amber: #ffaa00;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--dark);
+      color: var(--green);
+      font-family: 'Share Tech Mono', monospace;
+      overflow-x: hidden;
+    }
+
+    /* Scanlines */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: repeating-linear-gradient(
+        0deg, transparent, transparent 2px,
+        rgba(0,255,65,0.03) 2px, rgba(0,255,65,0.03) 4px
+      );
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    /* CRT flicker */
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(ellipse at center, transparent 60%, rgba(0,0,0,0.6) 100%);
+      pointer-events: none;
+      z-index: 9998;
+      animation: crt-flicker 0.15s infinite;
+    }
+    @keyframes crt-flicker {
+      0%,100% { opacity:1; }
+      50%      { opacity:0.97; }
+    }
+
+    /* Boot screen */
+    #boot-screen {
+      position: fixed;
+      inset: 0;
+      background: #000;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 60px;
+      z-index: 500;
+      font-family: 'VT323', monospace;
+      font-size: 1.2rem;
+      color: var(--green);
+    }
+    #boot-screen.hidden { display: none; }
+    #boot-log { white-space: pre; line-height: 1.6; }
+
+    /* Main terminal */
+    #terminal {
+      display: none;
+      min-height: 100vh;
+      padding: 0;
+    }
+    #terminal.active { display: block; }
+
+    /* Header bar */
+    .term-header {
+      background: #000;
+      border-bottom: 1px solid var(--dim-green);
+      padding: 14px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .term-header-left {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .umbrella-small {
+      width: 36px; height: 36px;
+      filter: drop-shadow(0 0 6px #cc0000aa);
+    }
+    .term-title {
+      font-family: 'VT323', monospace;
+      font-size: 1.4rem;
+      color: var(--red);
+      letter-spacing: 3px;
+    }
+    .term-status {
+      font-size: 0.7rem;
+      color: var(--dim-green);
+      letter-spacing: 2px;
+    }
+
+    /* Tabs */
+    .tabs {
+      display: flex;
+      gap: 0;
+      background: #000;
+      border-bottom: 1px solid var(--dim-green);
+      padding: 0 30px;
+    }
+    .tab {
+      padding: 10px 22px;
+      font-size: 0.75rem;
+      letter-spacing: 2px;
+      cursor: pointer;
+      border: none;
+      background: none;
+      color: var(--dim-green);
+      border-bottom: 2px solid transparent;
+      transition: color .2s, border-color .2s;
+    }
+    .tab:hover { color: var(--green); }
+    .tab.active { color: var(--green); border-bottom-color: var(--green); }
+
+    /* Panels */
+    .panel { display: none; padding: 30px; }
+    .panel.active { display: block; }
+
+    /* LOG VIEW */
+    .log-container {
+      background: #000;
+      border: 1px solid var(--dim-green);
+      padding: 20px;
+      max-height: 72vh;
+      overflow-y: auto;
+      position: relative;
+    }
+
+    .log-entry {
+      margin-bottom: 18px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid #001a04;
+    }
+    .log-entry:last-child { border-bottom: none; }
+
+    .log-header {
+      display: flex;
+      gap: 16px;
+      align-items: baseline;
+      margin-bottom: 6px;
+      flex-wrap: wrap;
+    }
+    .log-id {
+      color: var(--red);
+      font-size: 0.75rem;
+      letter-spacing: 1px;
+    }
+    .log-date {
+      color: var(--dim-green);
+      font-size: 0.7rem;
+    }
+    .log-author {
+      color: var(--amber);
+      font-size: 0.7rem;
+    }
+    .log-tag {
+      font-size: 0.65rem;
+      padding: 1px 6px;
+      border: 1px solid;
+    }
+    .tag-corrupted { color: #ff6600; border-color: #ff6600; }
+    .tag-classified { color: var(--red); border-color: var(--red); }
+    .tag-priority   { color: var(--amber); border-color: var(--amber); }
+    .tag-recovered  { color: var(--green); border-color: var(--green); }
+
+    .log-body {
+      font-size: 0.8rem;
+      line-height: 1.8;
+      color: #88cc88;
+      white-space: pre-wrap;
+      word-break: break-all;
+      margin-bottom: 10px;
+    }
+
+    .log-body.corrupted {
+      color: #556655;
+      font-size: 0.75rem;
+    }
+
+    .log-file-btn {
+      display: inline-block;
+      margin-top: 6px;
+      background: transparent;
+      color: var(--dim-green);
+      border: 1px solid var(--dim-green);
+      padding: 4px 12px;
+      font-family: 'Share Tech Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 1px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: color .2s, border-color .2s, background .2s;
+    }
+    .log-file-btn:hover {
+      color: var(--green);
+      border-color: var(--green);
+      background: #001a04;
+    }
+
+    /* Scrollbar */
+    .log-container::-webkit-scrollbar { width: 6px; }
+    .log-container::-webkit-scrollbar-track { background: #000; }
+    .log-container::-webkit-scrollbar-thumb { background: var(--dim-green); }
+
+    .watermark {
+      position: fixed;
+      bottom: 40px;
+      right: 40px;
+      font-family: 'VT323', monospace;
+      font-size: 5rem;
+      color: #cc000008;
+      pointer-events: none;
+      letter-spacing: 4px;
+      transform: rotate(-30deg);
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-bottom: 30px;
+    }
+    .stat-box {
+      background: #000;
+      border: 1px solid var(--dim-green);
+      padding: 20px;
+    }
+    .stat-label { font-size: 0.65rem; color: var(--dim-green); letter-spacing: 2px; margin-bottom: 8px; }
+    .stat-value { font-family: 'VT323', monospace; font-size: 2rem; color: var(--green); }
+    .stat-value.red { color: var(--red); }
+    .stat-value.amber { color: var(--amber); }
+
+    .back-link {
+      display: inline-block;
+      margin: 20px 30px;
+      color: var(--dim-green);
+      text-decoration: none;
+      font-size: 0.75rem;
+      letter-spacing: 2px;
+      transition: color .2s;
+    }
+    .back-link:hover { color: var(--green); }
+
+    .cursor::after {
+      content: '█';
+      animation: blink .8s step-end infinite;
+    }
+    @keyframes blink { 0%,100%{opacity:1;} 50%{opacity:0;} }
+
+    .warning-banner {
+      background: #1a0000;
+      border: 1px solid var(--red);
+      color: var(--red);
+      padding: 10px 20px;
+      font-size: 0.75rem;
+      letter-spacing: 2px;
+      text-align: center;
+      margin: 16px 30px;
+      animation: blink-border 2s ease-in-out infinite;
+    }
+    @keyframes blink-border {
+      0%,100% { border-color: var(--red); }
+      50%      { border-color: #3d0000; }
+    }
+  </style>
+</head>
+<body>
+
+<div id="boot-screen">
+  <pre id="boot-log"></pre>
+</div>
+
+<div id="terminal">
+  <div class="term-header">
+    <div class="term-header-left">
+      <svg class="umbrella-small" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="47" fill="none" stroke="#cc0000" stroke-width="3"/>
+        <path d="M50 50 L50 12 A38 38 0 0 0 17 31 Z" fill="#cc0000"/>
+        <path d="M50 50 L50 12 A38 38 0 0 1 83 31 Z" fill="#cc0000"/>
+        <path d="M50 50 L17 69 A38 38 0 0 0 83 69 Z" fill="#cc0000"/>
+        <line x1="50" y1="50" x2="50" y2="12" stroke="#000" stroke-width="3"/>
+        <line x1="50" y1="50" x2="17" y2="69" stroke="#000" stroke-width="3"/>
+        <line x1="50" y1="50" x2="83" y2="69" stroke="#000" stroke-width="3"/>
+        <circle cx="50" cy="50" r="5" fill="#000"/>
+      </svg>
+      <div>
+        <div class="term-title">UMBRELLA // CLASSIFIED TERMINAL</div>
+        <div class="term-status">ACCESS LEVEL: ALPHA-7 | SESSION ACTIVE <span class="cursor"></span></div>
+      </div>
+    </div>
+    <div style="font-size:0.7rem; color:var(--dim-green); text-align:right;">
+      <div id="live-time"></div>
+      <div>NODE: RACCOON_CITY_MAINFRAME</div>
+    </div>
+  </div>
+
+  <a class="back-link" href="index.html">← RETURN TO MAIN FACILITY</a>
+
+  <div class="warning-banner">
+    ⚠ RESTRICTED ZONE — UNAUTHORIZED ACCESS IS A LEVEL-5 FELONY UNDER UMBRELLA CORP ARTICLE 7-B ⚠
+  </div>
+
+  <div class="tabs">
+    <button class="tab active" onclick="switchTab('logs', event)">RESEARCH LOGS</button>
+    <button class="tab" onclick="switchTab('stats', event)">FACILITY STATS</button>
+    <button class="tab" onclick="switchTab('archive', event)">ARCHIVE</button>
+  </div>
+
+  <div class="panel active" id="panel-logs">
+    <div class="log-container" id="log-container"></div>
+  </div>
+
+  <div class="panel" id="panel-stats">
+    <div class="stats-grid">
+      <div class="stat-box">
+        <div class="stat-label">LIVE SUBJECTS</div>
+        <div class="stat-value red" id="stat-subjects">247</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-label">T-VIRUS VIALS</div>
+        <div class="stat-value">1,843</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-label">CONTAINMENT STATUS</div>
+        <div class="stat-value amber">BREACHED</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-label">DAYS SINCE INCIDENT</div>
+        <div class="stat-value red" id="stat-days">0</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-label">PERSONNEL REMAINING</div>
+        <div class="stat-value">12</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-label">G-VIRUS STATUS</div>
+        <div class="stat-value amber">UNCONFIRMED</div>
+      </div>
+    </div>
+    <div style="font-size:0.75rem; color:var(--dim-green); padding:20px; background:#000; border:1px solid var(--dim-green);">
+      NOTE: Statistics reflect data as of last server sync. Mainframe communication to Raccoon City has been degraded since the incident. Data may be inaccurate. Do not trust the count.
+    </div>
+  </div>
+
+  <div class="panel" id="panel-archive">
+    <div style="background:#000; border:1px solid var(--dim-green); padding:30px; font-size:0.8rem; line-height:1.9; color:#556655;">
+      UMBRELLA CORPORATION — INTERNAL ARCHIVE SYSTEM v3.1<br>
+      ATTEMPTING TO RETRIEVE ARCHIVED FILES...<br><br>
+      <span style="color:var(--red);">[ERR] FILE_NOT_FOUND: /archive/project_nemesis.dat</span><br>
+      <span style="color:var(--red);">[ERR] FILE_NOT_FOUND: /archive/wesker_directives.enc</span><br>
+      <span style="color:var(--amber);">[WARN] PARTIAL READ: /archive/raccoon_evac_plan.log — 34% RECOVERED</span><br>
+      <span style="color:var(--red);">[ERR] ACCESS_DENIED: /archive/tyrant_production_notes.bin</span><br>
+      <span style="color:var(--red);">[ERR] SECTOR_CORRUPTED: /archive/birkin_research_final.dat</span><br>
+      <span style="color:var(--amber);">[WARN] PARTIAL READ: /archive/ashford_code_veronica.log — 12% RECOVERED</span><br>
+      <span style="color:var(--red);">[ERR] FILE_NOT_FOUND: /archive/spencer_will.enc</span><br>
+      <br>
+      <span style="color:var(--green);">ARCHIVE RETRIEVAL COMPLETE. 2 OF 7 FILES PARTIALLY RECOVERED.</span><br>
+      <span style="color:var(--dim-green);">Contact your system administrator for full access. (Administrator last seen: 1998.)</span>
+    </div>
+  </div>
+
+  <div class="watermark">CLASSIFIED</div>
+</div>
+
+<script>
+  const bootLines = [
+    "UMBRELLA CORPORATION — SECURE TERMINAL v4.7",
+    "COPYRIGHT © 1968–2026 UMBRELLA CORP. ALL RIGHTS RESERVED.",
+    "",
+    "INITIALIZING BIOS........................................... OK",
+    "LOADING KERNEL MODULE: uc_mainframe.ko..................... OK",
+    "MOUNTING /dev/classified.................................... OK",
+    "CHECKING FILE SYSTEM INTEGRITY.............................. WARN",
+    "  >> SECTOR 0x3A7F: CORRUPTED",
+    "  >> SECTOR 0x9B12: CORRUPTED",
+    "  >> SECTOR 0xCC00: CORRUPTED",
+    "PARTIAL RECOVERY MODE ENABLED",
+    "",
+    "AUTHENTICATING SESSION... ALPHA-7 CLEARANCE DETECTED........ OK",
+    "LOADING RESEARCH LOG DATABASE............................... OK",
+    "CONNECTING TO RACCOON CITY MAINFRAME........................ FAILED",
+    "  >> RETRYING (1/3)......................................... FAILED",
+    "  >> RETRYING (2/3)......................................... FAILED",
+    "  >> RETRYING (3/3)......................................... FAILED",
+    "  >> OFFLINE MODE ACTIVATED",
+    "",
+    "WARNING: CONTAINMENT STATUS = BREACHED",
+    "WARNING: DO NOT OPEN SECTOR B DOORS",
+    "WARNING: NEMESIS UNIT LAST SEEN: SECTOR C — CAUTION ADVISED",
+    "",
+    "BOOT COMPLETE. LOADING TERMINAL...",
+  ];
+
+  let lineIdx = 0;
+  const bootLog = document.getElementById('boot-log');
+
+  function typeLine() {
+    if (lineIdx < bootLines.length) {
+      bootLog.textContent += bootLines[lineIdx] + '\n';
+      lineIdx++;
+      const delay = bootLines[lineIdx - 1] === '' ? 80 : Math.random() * 60 + 20;
+      setTimeout(typeLine, delay);
+    } else {
+      setTimeout(() => {
+        document.getElementById('boot-screen').classList.add('hidden');
+        document.getElementById('terminal').classList.add('active');
+        renderLogs();
+        startClock();
+      }, 600);
+    }
+  }
+
+  typeLine();
+
+  function startClock() {
+    const el = document.getElementById('live-time');
+    setInterval(() => {
+      el.textContent = new Date().toISOString().replace('T', ' ').slice(0, 19) + ' UTC';
+    }, 1000);
+    document.getElementById('stat-days').textContent = Math.floor(
+      (Date.now() - new Date('1998-09-29').getTime()) / 86400000
+    ).toLocaleString();
+  }
+
+  function switchTab(tab, e) {
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+    e.target.classList.add('active');
+    document.getElementById('panel-' + tab).classList.add('active');
+  }
+
+  function generateRandomDat(logId) {
+    const lines = [];
+    lines.push(`UMBRELLA CORPORATION — CLASSIFIED FILE ATTACHMENT`);
+    lines.push(`LOG-REFERENCE: ${logId}`);
+    lines.push(`GENERATED: ${new Date().toISOString()}`);
+    lines.push(`INTEGRITY: ${Math.random() > 0.5 ? 'COMPROMISED' : 'UNVERIFIED'}`);
+    lines.push(`CLEARANCE: ALPHA-${Math.floor(Math.random()*7)+1}`);
+    lines.push('');
+    lines.push('─'.repeat(60));
+    lines.push('RAW DATA DUMP:');
+    lines.push('─'.repeat(60));
+    const rowCount = 20 + Math.floor(Math.random() * 30);
+    for (let r = 0; r < rowCount; r++) {
+      let addr = (r * 16).toString(16).padStart(8, '0').toUpperCase();
+      let hex = '';
+      let ascii = '';
+      for (let b = 0; b < 16; b++) {
+        const byte = Math.floor(Math.random() * 256);
+        hex += byte.toString(16).padStart(2, '0').toUpperCase() + ' ';
+        ascii += byte >= 32 && byte < 127 ? String.fromCharCode(byte) : '.';
+      }
+      lines.push(`${addr}  ${hex} |${ascii}|`);
+    }
+    lines.push('');
+    lines.push('─'.repeat(60));
+    lines.push('END OF FILE');
+    return lines.join('\n');
+  }
+
+  // UPDATED DOWNLOAD FUNCTION FOR LOG-0099
+  async function downloadLogFile(logId) {
+    if (logId === "LOG-0099") {
+      const imageUrl = "corrupt image.jpeg"; 
+      try {
+        const response = await fetch(imageUrl);
+        if(!response.ok) throw new Error();
+        const blob = await response.blob();
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `UC_RECON_SATELLITE_0099.jpeg`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+      } catch (err) {
+        alert("CRITICAL ERROR: 'corrupt image.jpeg' not found in server directory.");
+      }
+    } else {
+      const content = generateRandomDat(logId);
+      const blob = new Blob([content], { type: 'text/plain' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `UC_${logId.replace('-','_')}_ATTACHMENT.dat`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }
+  }
+
+  const logs = [
+    {
+      id: "LOG-0001",
+      date: "1996-03-12 09:14:22",
+      author: "Dr. James Marcus",
+      tags: ["CLASSIFIED"],
+      body: `Leeches show remarkable viral uptake. T-Virus bonding efficiency at 94.7%. Phase III testing recommended.`
+    },
+    {
+      id: "LOG-0017",
+      date: "1997-07-04 03:30:01",
+      author: "Dr. William Birkin",
+      tags: ["CLASSIFIED", "PRIORITY"],
+      body: `G-Virus crystallization successful. It doesn't just mutate — it EVOLVES.`
+    },
+    {
+      id: "LOG-0034",
+      date: "1997-11-19 22:05:44",
+      author: "UNKNOWN",
+      tags: ["CORRUPTED"],
+      body: `0xFFE3 cont4inment f4ilure on sub-l3vel 0x0C... [SECTOR UNREADABLE]`
+    },
+    {
+      id: "LOG-0051",
+      date: "1998-01-30 11:44:03",
+      author: "Albert Wesker",
+      tags: ["CLASSIFIED"],
+      body: `S.T.A.R.S. reassignment to Raccoon City confirmed. The Mansion will be the stage.`
+    },
+    {
+      id: "LOG-0062",
+      date: "1998-05-11 08:02:11",
+      author: "Dr. Lisa Trevor (Transcript)",
+      tags: ["CORRUPTED", "RECOVERED"],
+      body: `she's wr1ting on the w4lls again... mama mama mama...`
+    },
+    {
+      id: "LOG-0079",
+      date: "1998-07-22 23:58:59",
+      author: "SYSTEM",
+      tags: ["CORRUPTED"],
+      body: `AUTO-LOG: BIOHAZARD EVENT DETECTED. ZONE: ARKLAY MOUNTAINS.`
+    },
+    {
+      id: "LOG-0088",
+      date: "1998-08-14 16:30:00",
+      author: "Annette Birkin",
+      tags: ["PRIORITY"],
+      body: `William is spending every night in the laboratory. The G-Virus is everything now.`
+    },
+    {
+      id: "LOG-0099", // TARGET LOG
+      date: "1998-09-28 04:12:55",
+      author: "UNKNOWN",
+      tags: ["CORRUPTED"],
+      body: `████ raccoon city ████████████████████████████████
+b0mb d3pl0yment c0nfirmed. aut00rized by ████████ 
+p0pulati0n: 100,000. expected surv1v0rs: ████
+[THIS LOG HAS BEEN FLAGGED FOR PERMANENT DELETION — U.S. GOV DIRECTIVE 7]`
+    }
+  ];
+
+  function generateCorruptedGarbage() {
+    const chars = '0123456789ABCDEF█▓▒░x';
+    let out = '';
+    for (let i = 0; i < 2; i++) {
+      let len = Math.floor(Math.random() * 40) + 20;
+      for (let j = 0; j < len; j++) out += chars[Math.floor(Math.random() * chars.length)];
+      out += '\n';
+    }
+    return out;
+  }
+
+  function renderLogs() {
+    const container = document.getElementById('log-container');
+    container.innerHTML = '';
+    logs.forEach(log => {
+      const entry = document.createElement('div');
+      entry.className = 'log-entry';
+      const tagsHtml = log.tags.map(t => {
+        const cls = { 'CORRUPTED': 'tag-corrupted', 'CLASSIFIED': 'tag-classified', 'PRIORITY': 'tag-priority', 'RECOVERED': 'tag-recovered' }[t] || 'tag-classified';
+        return `<span class="log-tag ${cls}">${t}</span>`;
+      }).join('');
+
+      let bodyContent = log.body;
+      if (log.tags.includes('CORRUPTED')) bodyContent = generateCorruptedGarbage() + '\n' + bodyContent;
+
+      const fileName = log.id === "LOG-0099" ? "UC_RECON_SATELLITE_0099.jpeg" : `UC_${log.id.replace('-','_')}_ATTACHMENT.dat`;
+
+      entry.innerHTML = `
+        <div class="log-header">
+          <span class="log-id">${log.id}</span>
+          <span class="log-date">${log.date}</span>
+          <span class="log-author">${log.author}</span>
+          ${tagsHtml}
+        </div>
+        <div class="log-body ${log.tags.includes('CORRUPTED') ? 'corrupted' : ''}">${bodyContent}</div>
+        <div style="margin-top:8px; font-size:0.65rem; color:var(--dim-green);">
+          ATTACHMENT: ${fileName} &nbsp;|&nbsp; SHA: ${Math.random().toString(16).substring(2,18).toUpperCase()}
+        </div>
+        <button class="log-file-btn" onclick="downloadLogFile('${log.id}')">⬇ DOWNLOAD ATTACHMENT</button>
+      `;
+      container.appendChild(entry);
+    });
+  }
+</script>
+</body>
+</html>
